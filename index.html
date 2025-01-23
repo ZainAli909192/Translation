@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation Service</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Translation Service</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#track-enquiry">Track Enquiry</a></li>
+                <li><a href="./admin.html">Admin Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Translate Your Documents Easily</h2>
+        <p>Upload your document and get a professional translation quickly.</p>
+        <a href="#enquiry" class="btn">Get Started</a>
+    </section>
+
+    <section id="enquiry" class="container">
+        <h2>Place an Enquiry</h2>
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email"   >
+            
+            <label for="document">Upload Document:</label>
+            <input type="file" id="document"   >
+
+            <button type="submit">Submit Enquiry</button>
+        </form>
+    </section>
+    <section id="quotation" class="container">
+        <h2>Your Quotation</h2>
+        <p>Price: <strong>$50</strong></p>
+        <p>Translation Time: <strong>2 Days</strong></p>
+        <button class="btn accept" onclick="showPayment()">Accept</button>
+        <button class="btn reject" onclick="hidePayment()">Reject</button>
+    </section>
+
+
+    <section id="payment" class="container hidden">
+        <h2>Make a Payment</h2>
+        <form>
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" placeholder="Enter card number"   >
+
+            <label for="expiry">Expiry Date:</label>
+            <input type="month" id="expiry"   >
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" placeholder="123"   >
+
+            <button type="submit">Pay Now</button>
+        </form>
+    </section>
+
+    <section id="track-enquiry" class="container">
+        <h2>Track Your Enquiry</h2>
+        <form>
+            <label for="track-email">Email:</label>
+            <input type="email" id="track-email" placeholder="Enter your email"   >
+            
+            <label for="enquiry-number">Enquiry Number:</label>
+            <input type="text" id="enquiry-number" placeholder="Enter enquiry number"   >
+
+            <button type="submit">Track</button>
+        </form>
+        <div class="status">
+            <h3>Current Status:</h3>
+            <p id="status-message">Awaiting quotation...</p>
+            <button  class="success">Download now</button>
+        </div>
+    </section>
+    <section id="download-section" class="container hidden">
+        <h2>Your Translated Document</h2>
+        <p>Document Status: <strong>Under Translation</strong></p>
+        <button class="btn download">Download Document</button>
+    </section>
+ 
+    <footer>
+        <p>&copy; 2025 Translation Service. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function showPayment() {
+            document.getElementById('payment').classList.remove('hidden');
+            document.getElementsByClass('status').classList.remove('hidden');
+        }
+        function hidePayment() {
+            document.getElementById('payment').classList.add('hidden');
+            document.getElementById('payment').classList.add('fadein');
+            document.querySelector('.status').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
