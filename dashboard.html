@@ -24,7 +24,7 @@
               Home</a>
           </li>
           <li> 
-              <a href="./admin-profile.html"> 
+              <a href="./need_quotation.html"> 
                   <i class="fas fa-user"></i>
 
                   Profile</a>
@@ -33,10 +33,10 @@
               <a href="./need_quotation.html"> 
                   <i class="fas fa-comment"></i>
 
-                  Provide quotations</a>
+                  Provide quotation</a>
               </li>
               <li>                
-                <a href="./provide_translation.html"> 
+                <a href="provide_translation.html"> 
                   <i class="fas fa-file-invoice-dollar"></i>
                   Provide Translation  
               </a></li>                
@@ -60,24 +60,69 @@
           <div class="bar"></div>
       </div>
   </nav> 
- 
-        <section id="pending upload-form"  class="container need2 need3">
-           
-    
+
+      <!-- Right-side Content Area -->
+      <div class="main-content">
+
+
+        <section id="dashboard" class="container ">
+            <h2>Dashboard</h2>
+            <p>Welcome, Admin! Manage translations efficiently.</p>
+            
+            <div class="dashboard-options">
+                <a href="#pending" class="btn">View Pending Quotations</a>
+                <a href="#accepted" class="btn success">View Accepted Quotations</a>
+            </div>
+        </section>
+
+        <section id="pending" class="container ">
+            <h2>Need Quotations</h2>
+            <table>
+                <tr>
+                    <th>Enquiry No</th>
+                    <!-- <th>Email</th> -->
+                    <th>Document</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>#12345</td>
+                    <!-- <td>user@example.com</td> -->
+                    <td><a href="#">View Document</a></td>
+                    <td><button onclick="showQuotationForm()">Provide Quotation</button></td>
+                </tr>
+            </table>
+            
             <div id="quotation-form" class="">
-                <h3>Your Profile</h3> 
+                <h3>Provide Quotation</h3>
                 <form>
-                    <label for="price">Name:</label>
+                    <label for="price">Price ($):</label>
                     <input type="number" id="price" placeholder="Enter price"  >
 
-                    <label for="days">Email:</label>
-                    <input type="email" id="days" placeholder="Enter days  "  >
-                   
-                    <label for="days">Password:</label>
-                    <input type="password" id="days" placeholder="Enter Password  "  >
- 
-                    <button type="submit" class="profile-btn">Upate details</button>
+                    <label for="days">Translation Time (Days):</label>
+                    <input type="number" id="days" placeholder="Enter days  "  >
+
+                    <button type="submit">Submit Quotation</button>
                 </form>
+            </div>
+        </section>
+
+        <section id="accepted" class="container ">
+            <h2>Accepted Quotations</h2>
+            <table>
+                <tr>
+                    <th>Enquiry No</th>
+                    <!-- <th>Email</th> -->
+                    <th>Action</th>
+                </tr>
+                <tr> 
+                    <td>#12345</td>
+                    <!-- <td>user@example.com</td> -->
+                </tr>
+                <td><input type="file"><button>Upload Translation</button></td>
+            </table>
+        </section>
+    </div>
+
 
   <script>
     // Toggle mobile menu visibility
