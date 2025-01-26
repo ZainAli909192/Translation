@@ -247,7 +247,7 @@ table th, table td {
 
 table th {
     background: #7943af;
-    background-color: white;
+    background-color: white !important;
     color: rgb(33, 32, 32);
 }
 
