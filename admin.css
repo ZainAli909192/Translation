@@ -432,4 +432,7 @@ table{
 .form-container button{
     width: 50%;
 }
- 
+ .login{
+    margin-left: -50%;
+    width: 70%;
+ }
