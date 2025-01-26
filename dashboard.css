@@ -355,3 +355,9 @@ body {
         margin-left: 1rem; 
     }
 }
+#uploadform{
+    width: 20% !important; 
+}
+#update-btn{
+    width: 30% !important;
+ } 

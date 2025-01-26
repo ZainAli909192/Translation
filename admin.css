@@ -107,6 +107,7 @@ table th {
     width: 10%;
      font-size: 0.9rem;
     background: #7943af;
+    background: #f3f0f7;
     color: white;
 }
 
@@ -200,21 +201,20 @@ input, button {
 }
 input{
     margin-right: 1rem;
-    width: 50%;
+    width: 40%;
 }
 #pending{
+    margin-top: 10%;
+    width: 50%; 
     box-shadow:-4px -4px 8px rgb(210, 210, 200), 4px 4px 8px rgb(142, 128, 128); 
   }
-
- 
 
 #quotation-form button {
     background: #7943af;
     color: white;
     border: none;
     cursor: pointer;
-    width: 50%;  
-
+    width: 40% !important;   
 }
 
 button:hover {
@@ -247,7 +247,8 @@ table th, table td {
 
 table th {
     background: #7943af;
-    color: white;
+    background-color: white;
+    color: rgb(33, 32, 32);
 }
 
 /* Hidden Elements */
@@ -369,7 +370,7 @@ box-shadow: 4px 4px 8px rgb(50, 49, 49);
         margin-bottom: 15%;     
     }    
     input{
-        width: 106%;
+        width: 50%;
         margin-bottom: 1rem;
     }
 }
@@ -400,7 +401,7 @@ box-shadow: 4px 4px 8px rgb(50, 49, 49);
     margin-bottom: 1rem; 
 }
 #quotation-form button{
-    width: 80%;   
+    width: 50%;    
 }
 #quotation-form .profile-btn{
     width: 50%;    
@@ -436,3 +437,4 @@ table{
     margin-left: -50%;
     width: 70%;
  }
+ 
