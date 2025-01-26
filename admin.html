@@ -5,96 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel - Translation Service</title>
     <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
 </head>
 <body>
 
     <!-- Sidebar Navigation -->
-    <header>
+    <!-- <header>
         <h1>Admin Panel</h1>
         <nav>
             <ul>
-                <li><a href="#">Dashboard</a></li>
+                <li><a href="./">Dashboard</a></li>
                 <li><a href="#pending">Need Quotations</a></li>
                 <li><a href="#accepted">Accepted Quotations</a></li>
                 <li><a href="./index.html">Logout</a></li>
             </ul>
         </nav>
-    </header>
+    </header> -->
 
-    <!-- Right-side Content Area -->
-    <div class="main-content">
-        <section id="admin-login" class="container">
-            <h2>Admin Login</h2>
-            <form id="login-form">
-                <label for="admin-email">Email:</label>
-                <input type="email" id="admin-email" placeholder="Enter your email"  >
-
-                <label for="admin-password">Password:</label>
-                <input type="password" id="admin-password" placeholder="Enter your password"  >
-
-                <button type="submit">Login</button>
-            </form>
-        </section>
-
-        <section id="dashboard" class="container ">
-            <h2>Dashboard</h2>
-            <p>Welcome, Admin! Manage translations efficiently.</p>
-            
-            <div class="dashboard-options">
-                <a href="#pending" class="btn">View Pending Quotations</a>
-                <a href="#accepted" class="btn success">View Accepted Quotations</a>
-            </div>
-        </section>
-
-        <section id="pending" class="container ">
-            <h2>Need Quotations</h2>
-            <table>
-                <tr>
-                    <th>Enquiry No</th>
-                    <th>Email</th>
-                    <th>Document</th>
-                    <th>Action</th>
-                </tr>
-                <tr>
-                    <td>#12345</td>
-                    <td>user@example.com</td>
-                    <td><a href="#">View Document</a></td>
-                    <td><button onclick="showQuotationForm()">Provide Quotation</button></td>
-                </tr>
-            </table>
-            
-            <div id="quotation-form" class="">
-                <h3>Provide Quotation</h3>
-                <form>
-                    <label for="price">Price ($):</label>
-                    <input type="number" id="price" placeholder="Enter price"  >
-
-                    <label for="days">Translation Time (Days):</label>
-                    <input type="number" id="days" placeholder="Enter days  "  >
-
-                    <button type="submit">Submit Quotation</button>
-                </form>
-            </div>
-        </section>
-
-        <section id="accepted" class="container ">
-            <h2>Accepted Quotations</h2>
-            <table>
-                <tr>
-                    <th>Enquiry No</th>
-                    <th>Email</th>
-                    <th>Deadline</th>
-                    <th>Action</th>
-                </tr>
-                <tr>
-                    <td>#12345</td>
-                    <td>user@example.com</td>
-                    <td>2 Days</td>
-                    <td><input type="file"><button>Upload Translation</button></td>
-                </tr>
-            </table>
-        </section>
+    
+<div class="form-container">
+    <div class="left-section">
+        <img src="./img/about-pic.jpg" alt="">
     </div>
+    <div class="right-section">
+        <h2>Login</h2>
+        <input type="text" class="input-field" placeholder="Email">
+        <input type="password" class="input-field" placeholder="Password">
+       <a href="./admin-profile.html">
+
+           <button class="btn">
+               <i class="fas fa-lock"></i>
+               Login</button>
+            </a>
+            <p class="toggle-link">Don't have an account? Sign up</p>
+           <a href="./">
+
+               <button class="btn danger">     
+                   <i class="fas fa-arrow-left "></i>
+                   Back to home</button> 
+                </a>
+    </div>
+</div>
+
 
     <script>
         document.getElementById("login-form").addEventListener("submit", function(event) {
