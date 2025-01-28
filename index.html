@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title>Responsive Navbar</title>
+  <title>Index</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style2.css">
   <!-- Font Awesome Link for Icons -->
@@ -10,39 +10,41 @@
 </head>
 <body>
 
-    
+
 
     <nav class="navbar" id="top">
         <div class="navbar-logo">
             <img src="./img/logo.jpg" alt="techfort logo">
         </div>
         <ul class="navbar-links">
-            <li><a class="active" href="#home">
-                <i class="fas fa-home"></i>
-                Home</a>
-            </li>
+           
             <li> 
-
                 <a href="#about"> 
-                    <i class="fas fa-user"></i>
-
+                    <i class="fas fa-home"></i>
+                    Home</a>
+                </li>
+            <li> 
+                <a href="#about"> 
+                    <i class="fas fa-info-circle"></i>
                     About</a>
                 </li>
-                <li>                
+            <li>                
                 <a href="#services"> 
                     <i class="fas fa-clipboard-list"></i>
-
                     Services 
                 </a></li>                
-                 
-            <li><a href="#contact" >
+            <li><a href="./get-quote.html" >
                 <i class="fas fa-comment-dollar"></i> 
                 Get quote</a>
             </li> 
-            <li><a href="#track" >
+            <li><a href="./inquiry-form.html" >
                 <i class="fas fa-search"></i>	                Track inquiry</a>
             </li> 
-            <li><a href="./admin.html" >
+            <li><a href="#faq" > 
+                <i class="fas fa-question-circle"></i>
+                FAQ</a>
+            </li> 
+            <li><a href="./admin.html" > 
                 <i class="fas fa-user"></i>
             Admin?     	                
             </a>
@@ -57,7 +59,7 @@
             <button class="navbar-button btt success">
                 <!-- <i class="fas fa-comment-dollar"></i>  -->
                 <i class="fas fa-paper-plane"></i> 
-                Send Inquiry</button>
+                Contact Us</button>
            
         </a>
         <div class="navbar-toggle">
@@ -67,8 +69,6 @@
         </div>
     </nav> 
     <main>
-
-
           <!-- About section  -->
           <section class="about about2" id="about">
             <img src="./img/about-pic.jpg" class="side-in from-left" alt="techfort about">
@@ -94,6 +94,7 @@
             </div>
         </section>
 
+        <!-- document translation services  -->
         <section class="document-translation">
             <h2>Why use our document translation services?</h2>
             <div class="translation-wrapper">
@@ -119,10 +120,10 @@
                         to make sure the final product comes out flawless.</p>
                 </div>
             </div>
-        </section>
-        
+        </section>  
 </main>
 
+<!-- Services sections -->
 <div class="translation-services" id="services">
     <h2>We offer following documents translation services</h2>
     <div class="services-list">
@@ -153,9 +154,52 @@
     </div>
 </div>
 
+<!-- FAQ section  -->
+<div class="faq-container">
+    <div class="faq-header">Frequently Asked Questions (FAQ)</div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            What type of file i can upload for translation?
+            <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>We accept a wide range of file formats, <span style="color: var(--primary-color);">
+
+             including DOCX, PDF, TXT, PPTX, XLSX, JPG, PNG </span>, and more. If you have a specific file format that is not listed, feel free to contact us, and we will do our best to accommodate your needs.
+
+            </a> 
+                </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            How much time does it take for the document to be translated?
+            <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>
+                The turnaround time depends on the length and complexity of the document, as well as the language pair. Smaller projects <span style="color:var(--primary-color)"> (under 1,000 words) </span> can often be completed within <span style="color:var(--primary-color)">24 hours</span>, while larger projects may take a few days. If you need an urgent translation, we also offer expedited services for faster delivery.
+
+            </p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            Do you have different pricing levels?
+            <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>We offer different pricing levels depending on the <span style="color:var(--primary-color)">length of document </span>, . Our pricing is structured to be flexible and meet your specific needs.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Contact section  -->
 <section id="contact" > 
   <div class="description-form">
-    <p class="mesg">Your details & document for translation</p>
+    <p class="mesg">Get in touch</p>
     
     <form action="" name="contact-form" id="contact-form" method="post" autocomplete="off">
   
@@ -165,141 +209,49 @@
             <input type="text" id="name" placeholder="" name="name"  required >
         </div>
         <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder=""   name="email" required>
+            <label for="number">Number</label>
+            <input type="number" id="number" placeholder=""   name="email" required>
           </div>
     </div>
     
     <div class="row">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder=""   name="email" required>
+          </div>
       <div class="form-group">
-        <label for="email">Document</label>
-        <input type="file" id="file" placeholder="Document"    name="email" required>
-      </div>  
-    </div>
-    <div class="row">
-      
-      <button type="submit"  class="navbar-button">       <i class="fas fa-paper-plane"></i>
-         Send Inquiry</button>
+        <label for="mesg">Message</label> 
+    <textarea name="mesg" id="mesg" cols="10" rows="5"></textarea>  
+</div>  
+</div>
+<div class="row">
+      <div></div>  
+      <button type="submit"  class=" send" style="width: 40%;">       <i class="fas fa-paper-plane"></i>
+         Send Message</button>
     </form> 
       
     </div>
     </div>
   
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('.icon');
+
+                if (answer.style.display === "block") {
+                    answer.style.display = "none";
+                    icon.textContent = "+";
+                } else {
+                    answer.style.display = "block";
+                    icon.textContent = "-";
+                }
+            });
+        });
+    </script>
   </section>
 
-<section id="track">
-    <div class="tracking-content">
-       <p>
-
-           Looking to track your inquiry? 
-        </p>
-    <img src="./img/tracking.jpeg" alt="">
-    </div> 
-  <div class=" description-form  success" style="    background: #a777e3;
-">
-    <p class="mesg ">Track your inquiry</p>
-    
-    <form action="" name="contact-form" id="contact-form" method="post" autocomplete="off">
-  
-        <div class="row">
-        <div class="form-group">
-            <label for="name">Email</label>
-            <input type="text" id="name" placeholder="" name="name"  required >
-        </div>
-        <div class="form-group">
-            <label for="number">Inquiry Number</label>
-            <input type="number" id="inq_number" placeholder=""   name="email" required>
-          </div>
-    </div>
-    
-    <div class="row">
-      
-      <button type="submit"  class="navbar-button" onclick="showPopup()">   
-        <i class="fas fa-search"></i>        
-        Track now</button>
-    </form>
-    </div> 
-    <div class="dangerr">  
-        Your translated document will be available to download with in 2 days
-        <button class="navbar-button download-btn">
-            <i class="fas fa-arrow-down "> </i>
-            Download now
-        </button>
-    </div>
-    <br>    
-    
- <!-- popup of payment -->
-<div id="popup" class="popup-container" style="display: none;">
-    <div class="popup-content">
-        <h2>Quotation from admin</h2>
-        <br>
-        <p>Price: $100</p>
-        <p>Number of Days: 2</p>
-        <button onclick="showPaymentForm()">Accept</button>
-        <button class="danger" onclick="closePopup()">Reject</button>
-    </div>
-</div>
-
-<!-- payment form (initially hidden) -->
-<div id="popup2" class="popup-container" style="display: none;">
-    <div class="popup-content">
-        <div id="payment-form" style="display: none;">
-            <h3>Payment Details</h3>
-            <label for="card-number">Card Number</label>
-            <input type="text" id="card-number" placeholder="Enter card number">
-            <label for="expiry">Expiry Date</label>
-            <input type="text" id="expiry" placeholder="MM/YY">
-            <label for="cvv">CVV</label>
-            <input type="text" id="cvv" placeholder="CVV">
-            <button onclick="submitPayment()">Submit Payment</button>
-        </div>
-        <img src="./img/payment2.jpg" alt="">
-
-    </div>
-</div>
- 
-<!-- script for popup show hide -->
-<script>
-    function showPopup() {
-        document.getElementById('popup').style.display = 'block';
-    }
-    const ul =document.querySelectorAll(".navbar-links ");
-    const navlinks =document.querySelectorAll(".navbar-links a");
-    navlinks.forEach(item,()=>{
-        item.addEventListener("click",()=>{
-            ul.classList.remove("active");
-        alert(item);
-        })
-    })
-
-    function closePopup() {
-        document.getElementById('popup').style.display = 'none';
-        document.getElementById('popup2').style.display = 'none'; // Close the payment form if popup is closed
-    }
-
-    function showPaymentForm() {
-        document.getElementById('popup').style.display = 'none'; // Hide the first popup
-        document.getElementById('popup2').style.display = 'block'; // Show the payment form
-        document.getElementById('payment-form').style.display = 'block'; // Ensure the payment form is shown
-    }
-
-    function submitPayment() {
-        alert('Payment submitted successfully!');
-        closePopup(); // Close both popups after successful payment
-        document.querySelector('.dangerr').style.display = 'block'; // Ensure the payment form is shown
-        setTimeout(()=>{
-    document.querySelector('.dangerr').style.display = 'none';  
-    
-}, 8000)
-}
-</script>
-
-    
-    </div>
-    </div>
-  
-  </section>
-
+<!-- footer section -->
   <footer>All &copy; rights reserved</footer>
 
     <script>
@@ -321,7 +273,6 @@ navbarLinksAnchors.forEach(anchor => {
 });
 
     </script>
-  <!-- Section for image -->
-  <section></section>
+  
 </body>
 </html>
