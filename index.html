@@ -9,7 +9,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 <body>
+  
+    <!-- loader code  -->
+    <div class="loader-container">
+        <img class="loader-svg" src="./img/loader.svg" alt="loader">
+    </div>
 
+    <!-- loader script  -->
+    <script>
+        const loaderContainer = document.querySelector('.loader-container');
+        setTimeout(() => {
+            loaderContainer.style.display = 'none';
+        }, 1000);
+    </script>
+    
 
 
     <nav class="navbar" id="top">
@@ -71,9 +84,9 @@
     <main>
           <!-- About section  -->
           <section class="about about2" id="about">
-            <img src="./img/about-pic.jpg" class="side-in from-left" alt="techfort about">
+            <img src="./img/about-pic.jpg" class=" from-left" alt=" about">
         
-            <div class="content side-in from-right">
+            <div class="content ">
                 <h1>Professional documents translation services 
                 </h1>
                 <div class="sub-content">
@@ -127,7 +140,7 @@
 <div class="translation-services" id="services">
     <h2>We offer following documents translation services</h2>
     <div class="services-list">
-        <ul>
+        <ul class="services-listed">
             <li>Financial Statements</li>
             <li>Legal Documents</li>
             <li>Medical Documents</li>
@@ -135,7 +148,7 @@
             <li>Annual Reports</li>
             <li>ID Cards</li>
         </ul>
-        <ul>
+        <ul class="services-listed">
             <li>Academic Documents</li>
             <li>Academic Transcripts</li>
             <li>Drivers License</li>
@@ -143,7 +156,7 @@
             <li>Passports</li>
             <li>Bank statements</li>
         </ul>
-        <ul>
+        <ul class="services-listed">
             <li>Birth Certificates</li>
             <li>Certifications</li>
             <li>Apostille</li>
@@ -155,46 +168,57 @@
 </div>
 
 <!-- FAQ section  -->
+<div id="faq"></div> 
 <div class="faq-container">
-    <div class="faq-header">Frequently Asked Questions (FAQ)</div>
-
-    <div class="faq-item">
-        <button class="faq-question">
-            What type of file i can upload for translation?
-            <span class="icon">+</span>
-        </button>
-        <div class="faq-answer">
-            <p>We accept a wide range of file formats, <span style="color: var(--primary-color);">
-
-             including DOCX, PDF, TXT, PPTX, XLSX, JPG, PNG </span>, and more. If you have a specific file format that is not listed, feel free to contact us, and we will do our best to accommodate your needs.
-
-            </a> 
-                </div>
+    <div class="faq-left">
+        <h2>Frequently Asked Questions</h2>
+        <p>Questions? You’re not alone!</p>
+        <img class="faq-image" src="./img/faq-image.png" alt="FAQ Illustration"> 
     </div>
+    <div class="faq-right">
+        <div class="faq-item" onclick="toggleFAQ(this)">
+            <span>What type of file i can upload for translation?</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            We accept a wide range of file formats, <span style="color: var(--primary-color);">
 
-    <div class="faq-item">
-        <button class="faq-question">
-            How much time does it take for the document to be translated?
-            <span class="icon">+</span>
-        </button>
+                including DOCX, PDF, TXT, PPTX, XLSX, JPG, PNG </span>, and more. If you have a specific file format that is not listed, feel free to contact us, and we will do our best to accommodate your needs.
+   
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+            <span>How much time does it take for the document to be translated?</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            The turnaround time depends on the length and complexity of the document, as well as the language pair. Smaller projects <span style="color:var(--primary-color)"> (under 1,000 words) </span> can often be completed within <span style="color:var(--primary-color)">24 hours</span>, while larger projects may take a few days. If you need an urgent translation, we also offer expedited services for faster delivery.
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+            <span>Do you have different pricing levels?</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
         <div class="faq-answer">
             <p>
-                The turnaround time depends on the length and complexity of the document, as well as the language pair. Smaller projects <span style="color:var(--primary-color)"> (under 1,000 words) </span> can often be completed within <span style="color:var(--primary-color)">24 hours</span>, while larger projects may take a few days. If you need an urgent translation, we also offer expedited services for faster delivery.
-
+                We offer different pricing levels depending on the <span style="color:var(--primary-color)">length of document </span>, . Our pricing is structured to be flexible and meet your specific needs.
             </p>
         </div>
-    </div>
 
-    <div class="faq-item">
-        <button class="faq-question">
-            Do you have different pricing levels?
-            <span class="icon">+</span>
-        </button>
-        <div class="faq-answer">
-            <p>We offer different pricing levels depending on the <span style="color:var(--primary-color)">length of document </span>, . Our pricing is structured to be flexible and meet your specific needs.</p>
-        </div>
     </div>
 </div>
+
+<script>
+    function toggleFAQ(element) {
+        const answer = element.nextElementSibling;
+        element.classList.toggle("active");
+        if (answer.style.display === "block") {
+            answer.style.display = "none";
+        } else {
+            answer.style.display = "block";
+        }
+    }
+</script>
 
 <!-- Contact section  -->
 <section id="contact" > 
