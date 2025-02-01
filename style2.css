@@ -173,6 +173,7 @@ body {
   
   .about h1{
     font-size: 1.8rem;  
+    color: var(--primary-color);
   }
   .about img {
     width: 45vw;  
@@ -182,18 +183,21 @@ body {
     filter: drop-shadow(12px 12px 10px gray);
     animation: slideInFromLeft 2s;
     animation-timeline: view();
-    animation-range: entry 0% cover 30% ;    
-    animation-delay: 2s;
+    animation-range: entry 0% cover 50% ;    
   
   }
   .about .content  {
     padding: 30px; 
-    width: 70%; 
-    animation: slideInFromRight 10s;
+    width: 70%;     
+    animation: slideFromRight 1s;
     animation-timeline: view();
-    animation-range: entry 0% cover 30% ;    
+    animation-range: entry 0% cover 30% ;
+ 
     transition: transform 3s;
+    /* animation: pulse 1s infinite; */
   }
+ 
+  
   .about .content :has(h3, p){  
     margin-top: 5%;
   }
@@ -203,21 +207,52 @@ body {
   .about .content button{
     margin-top: 10%; 
   }
-  
   /* Animation Styles */
-  @keyframes slideInFromLeft {
-    from {
-      /* transform: translateX(-100%); */
-      opacity: 0;
+
+  .loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotate 2s linear infinite;
+  }
+  .loader > div{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    margin: 0 5px;
+  }
+  .loader > div:nth-child(1){
+    animation: move 1s ease-in-out infinite alternate;
+  }
+  .loader > div:nth-child(2){
+    animation: move 1s ease-in-out infinite alternate 0.2s;
+  }
+  .loader > div:nth-child(3){
+    animation: move 1s ease-in-out infinite alternate 0.4s;
+  }
+  @keyframes rotate{
+    from{
+      transform: rotate(0deg);
     }
-    to {
-      /* transform: translateX(0); */
-      opacity: 1;
+    to{
+      transform: rotate(360deg);
     }
   }
-  
+  @keyframes move{
+    from{
+      transform: translateY(0);
+    }
+    to{
+      transform: translateY(-15px);
+    }
+  }
   @keyframes slideInFromRight {
-    20% {
+    from {
       transform: translateY(100%);
       opacity: 0;
     }
@@ -244,17 +279,35 @@ body {
     }
 
     .about img {
-        width: 50%;
+        width: 60vw; 
         height: auto;
         z-index: 1;
         margin-bottom: 20px;
     }
-.about{
-    width: 86%;  
+    .about{
+        width: 86%;  
+    }
+    .about h1{
+        font-size: 1.2rem;
+    }
+    .about .content {
+        width: 90%;
+        padding: 0;
+    }
 }
-.about h1{
-    font-size: 1.2rem;
-}
+@media (max-width: 480px) {
+    .about img {
+        width: 60vw;
+        height: auto;
+        z-index: 1;
+        margin-bottom: 20px;    
+    }
+    .about{
+        width: 86%;  
+    }
+    .about h1{
+        font-size: 1.2rem;
+    }
     .about .content {
         width: 90%;
         padding: 0;
@@ -266,6 +319,20 @@ body {
     text-align: center;
     padding: 50px 20px;
     font-family: Arial, sans-serif;
+    animation: slideUpScale 0.8s;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50% ;
+}
+
+@keyframes slideUpScale {
+    0% {
+        transform: translateY(50px) scale(0.95);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
 }
 
 .document-translation h2 {
@@ -986,4 +1053,173 @@ footer{
         margin-left: 2%;  
         margin-right: 2%;  
        }
+}
+
+/* Loader Styles */
+.loader-container{
+    position: fixed;
+    /* top: 40%;
+    left: 40%; */
+height: 100vh;
+width: 100vw;
+background-color: rgba(23, 22, 22, 0.2);
+    /* display: none; */
+    backdrop-filter: blur(1px);
+z-index: 9999;     
+}
+.loader-container img{
+    position: relative;
+    top: 40%;
+    left: 40%;
+    height: 100px;
+    width: 100px;
+}
+
+
+.faq-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.faq-left {
+    flex: 1;
+    padding-right: 20px;
+}
+.faq-left h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.faq-left p {
+    font-size: 18px;
+    color: #555;
+}
+.faq-image {
+    max-width: 150px;
+}
+.faq-right {
+    flex: 2;
+}
+.faq-item {
+    background: var(--primary-color);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.faq-item i {
+    transition: transform 0.3s;
+}
+.faq-item.active i {
+    transform: rotate(180deg);
+}
+.faq-answer {
+    display: none;
+    background: #fff;
+    padding: 15px;
+    border-radius: 0 0 8px 8px;
+    font-size: 16px;
+    color: #333;
+}
+
+@media (max-width:480px) {
+    .faq-container{
+        flex-direction: column;
+    }
+    .faq-left{
+        margin-left: 20%;
+    }
+}
+
+#about img{
+ animation: slideFromLeft 1s ease-in-out forwards;   
+ /* animation: slideFromdown 1s ; */
+ animation-timeline: view();
+ animation-range: entry 0% cover 30% ;
+
+}
+ 
+.content{
+    animation: slideFromRight 2s ease-in-out forwards;   
+    /* animation: slideFromdown 1s ; */
+    /* animation-timeline: view(); */
+    /* animation-range: entry 0% cover 20% ; */
+  
+}
+   .faq-container{
+    animation: slideFromLeft 1s ;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30% ;
+    transition: animation 2s; 
+   }
+.services-listed:nth-child(1) {
+    animation: slideFromLeft 1s ease-in-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30% ;
+    transition: animation 2s;
+}  
+.services-listed:nth-child(3) {
+
+    animation: slideFromRight 1s ease-in-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30% ;
+    transition: animation 2s;
+}  
+.services-listed{
+    animation-timeline: view();
+    animation-range: entry 0% cover 30% ;
+    transition: animation 2s;
+}
+.document-translation{
+    animation: slideFromdown 1s ;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30% ;
+}
+@keyframes slideFromRight {
+    from {
+        transform: translateX(100vw);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(-100vw);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideFromdown {
+    from {
+        transform: translateY(100vw);
+        opacity: 0;
+        z-index: -1;
+    }
+    to {
+        z-index: 12;
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
