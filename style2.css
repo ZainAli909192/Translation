@@ -1193,8 +1193,8 @@ z-index: 9999;
 }
 #about img{ 
     animation: scalling 2s;
-    animation-timeline: view();
-  animation-range: entry 0% cover 30% ; 
+    /* animation-timeline: view();
+  animation-range: entry 0% cover 0% ;  */
 }
 
 @keyframes scalling {
