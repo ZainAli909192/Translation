@@ -7,31 +7,6 @@ body {
     color: #333;
 }
 
-/* Header Styling */
-header {
-    background: #7943af;
- 
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
 /* Forms and Containers */
 .container {
     max-width: 800px;
@@ -92,6 +67,7 @@ button:hover {
 
 /* Tables */
 table {
+    border: 1px solid ;
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
@@ -249,6 +225,7 @@ table th {
     background: #7943af;
     background-color: white !important;
     color: rgb(33, 32, 32);
+    border: 1px solid black; 
 }
 
 /* Hidden Elements */
@@ -288,6 +265,9 @@ footer {
 .left-section img{
     height: 80%;
 width: 80%;
+margin-top: 9%;
+animation: slideFromLeft 1s ease-in-out forwards;
+
 }
 
 .right-section {
@@ -297,8 +277,32 @@ width: 80%;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    
+    animation: slideFromRight 1s ease-in-out forwards;
+    /* animation-delay: 2s; */
+    transform: translateX(100vw);    
 }
 
+@keyframes slideFromRight {
+    from {
+        transform: translateX(100vw);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(-100vw);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 .right-section h2 {
     margin-bottom: 20px;
     font-size: 2rem;
@@ -315,7 +319,7 @@ width: 80%;
 }
 
 .btn {
-    width: 77%;
+    width: 77%; 
     padding: 15px;
     background: #a777e3;
     border: none;
@@ -334,6 +338,7 @@ width: 80%;
 
 .toggle-link {
     margin-top: 20px;
+    margin-left: -50%;
     color: #667eea;
     cursor: pointer;
 }
@@ -350,6 +355,9 @@ width: 80%;
         /* background: linear-gradient(rgba(141, 111, 111,0.2) , rgba(141, 111, 111,0.2) , url("./img/logo.jpg") ); */
         /* background-repeat: no-repeat;  */
     }
+    .toggle-link{
+        margin-left: 20%;
+    }
  .need{
      margin-left: 0rem;   
  }
@@ -365,7 +373,8 @@ box-shadow: 4px 4px 8px rgb(50, 49, 49);
     }
     td button{  
         font-size: 0.8rem; 
-    }
+        width: 80%; 
+        }
     table{
         margin-bottom: 15%;     
     }    
@@ -377,17 +386,26 @@ box-shadow: 4px 4px 8px rgb(50, 49, 49);
 
 @media (max-width: 480px) {
 
+    .form-container{  
+        margin-top: 18%!important; 
+    }
     input{
-        width: 80%;  
+        width: 90% !important;   
         margin-bottom: 1rem;
     }
-    
+    .btn{ 
+        width:65% !important; 
+    margin-left: -33% !important; 
+    }
     #quotation-form button{
-        width: 45%;     
-        }    
+        width: 55%;      
+    }    
     #pending{ 
         margin:0 2%; 
         margin-top: 15%;         
+    }
+    .form-container{
+        margin-top: 46%;
     }
 }
 #qutation-form{
@@ -407,9 +425,9 @@ box-shadow: 4px 4px 8px rgb(50, 49, 49);
     width: 50%;    
 }
 .need3 {
-    max-width: 51%;
-    margin-top: 7%;
-    margin-left: 30%; 
+    max-width: 49%;
+    margin-top: 7%; 
+    margin-left: 25%;
 }
 .profile-btn{
     width: 0%;
@@ -424,6 +442,7 @@ input:focus{
     outline: 1px solid blueviolet;
 } 
 table{
+    border: 1px solid; 
     margin-bottom: 5%;  
 }    
 .form-container{
@@ -437,4 +456,11 @@ table{
     margin-left: -50%;
     width: 70%;
  }
+@media (max-width: 480px) {
+.need3{
+    max-width: 89%;
+    margin-top: 15%;
+    margin-left: 5%;
+}
+}
  
