@@ -12,7 +12,7 @@
   
     <!-- loader code  -->
     <div class="loader-container">
-        <img class="loader-svg" src="./img/Loader.svg" alt="loader">
+        <img class="loader-svg" src="./img/loader.svg" alt="loader">
     </div>
 
     <!-- loader script  -->
@@ -23,7 +23,24 @@
         }, 1000);
     </script>
     
-
+<style> 
+body{
+    overflow-x: hidden;
+}
+    .about .content{ 
+        animation: scalling 2s ;
+        /* animation-timeline: view();
+      animation-range: entry 0% cover 30% ;  */
+    }
+    @keyframes scalling {
+        from {
+            transform: scale(0);
+        }
+        to {
+            transform: scale(1);
+        }
+    }
+</style>
 
     <nav class="navbar" id="top">
         <div class="navbar-logo">
@@ -278,6 +295,7 @@
 <!-- footer section -->
   <footer>All &copy; rights reserved</footer>
 
+  <!-- navbar toggle  -->
     <script>
         // Toggle mobile menu visibility
         const toggleButton = document.querySelector('.navbar-toggle');

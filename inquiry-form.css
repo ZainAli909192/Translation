@@ -409,3 +409,21 @@ animation: glowing 1s infinite ease-in-out;
   }
 }
 
+
+/* Loader Styles */
+.loader-container{
+  position: fixed;
+height: 100vh;
+width: 100vw;
+background-color: rgba(23, 22, 22, 0.2);
+  /* display: none; */
+  backdrop-filter: blur(1px);
+z-index: 9999;     
+}
+.loader-container img{
+  position: relative;
+  top: 40%;
+  left: 40%;
+  height: 100px;
+  width: 100px;
+}
