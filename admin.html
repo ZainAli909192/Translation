@@ -10,6 +10,20 @@
 </head>
 <body>
 
+        <!-- loader code  -->
+        <div class="loader-container">
+            <img class="loader-svg" src="./img/loader.svg" alt="loader">
+        </div>
+    
+        <!-- loader script  -->
+        <script>
+            const loaderContainer = document.querySelector('.loader-container');
+            setTimeout(() => {
+                loaderContainer.style.display = 'none';
+            }, 1000);
+        </script>
+        
+    
     <!-- Sidebar Navigation -->
     <!-- <header>
         <h1>Admin Panel</h1>

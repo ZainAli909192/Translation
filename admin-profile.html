@@ -14,6 +14,19 @@
   </head>
   <body>
 
+   <!-- loader code  -->
+   <div class="loader-container">
+    <img class="loader-svg" src="./img/loader.svg" alt="loader">
+</div>
+
+<!-- loader script  -->
+<script>
+    const loaderContainer = document.querySelector('.loader-container');
+    setTimeout(() => {
+        loaderContainer.style.display = 'none';
+    }, 1000);
+</script>
+
     <nav class="navbar" id="top">
       <div class="navbar-logo">
           <img src="./img/logo.jpg" alt="techfort logo">
@@ -59,7 +72,6 @@
  
         <section id="pending upload-form"  class="container need2 need3">
            
-    
             <div id="quotation-form" class="">
                 <h3>Your Profile</h3> 
                 <form>
@@ -74,8 +86,10 @@
  
                     <button type="submit" class="profile-btn">Upate details</button>
                 </form>
-
-  <script>
+                
+            </div>
+</section>
+<script>
     // Toggle mobile menu visibility
     const toggleButton = document.querySelector('.navbar-toggle');
 const navbarLinks = document.querySelector('.navbar-links');

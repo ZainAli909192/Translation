@@ -148,7 +148,7 @@ nav ul li a {
 
 /* Forms and Containers */
 .container {
-    max-width: 800px;
+    max-width: 630px;
     margin: 50px auto;
     padding: 20px;
     background: white;
@@ -177,7 +177,7 @@ input, button {
 }
 input{
     margin-right: 1rem;
-    width: 40%;
+    width: 60%;
 }
 #pending{
     margin-top: 10%;
@@ -362,10 +362,10 @@ animation: slideFromLeft 1s ease-in-out forwards;
      margin-left: 0rem;   
  }
  .container {
-margin-left: 9%;
-margin-top: 30%;    
-max-width: 85vw; 
-box-shadow: 4px 4px 8px rgb(50, 49, 49); 
+    margin-left: 5%;
+    margin-top: 5%;
+    max-width: 90vw;
+    box-shadow: 4px 4px 8px rgb(50, 49, 49);
 }
     .left-section {
         display: none;
@@ -373,7 +373,7 @@ box-shadow: 4px 4px 8px rgb(50, 49, 49);
     }
     td button{  
         font-size: 0.8rem; 
-        width: 80%; 
+        width: 107%; 
         }
     table{
         margin-bottom: 15%;     
@@ -401,7 +401,7 @@ box-shadow: 4px 4px 8px rgb(50, 49, 49);
         width: 55%;      
     }    
     #pending{ 
-        margin:0 2%; 
+        margin:0 5%; 
         margin-top: 15%;         
     }
     .form-container{
@@ -485,3 +485,21 @@ z-index: 9999;
 }
 
 
+#quotation-form.hide{
+    display: none;
+}
+.container2{ 
+    display: flex;
+} 
+@media (max-width: 480px) {
+    #pending{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
+#login-pic{
+    margin-top: 2rem;
+    width:  200px;
+    height: 200px; 
+    filter: drop-shadow(7px 7px 5px var(--primary-color));
+}

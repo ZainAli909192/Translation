@@ -14,15 +14,27 @@
   </head>
   <body>
 
+    <!-- loader code  -->
+    <div class="loader-container">
+        <img class="loader-svg" src="./img/loader.svg" alt="loader">
+    </div>
+
+    <!-- loader script  -->
+    <script>
+        const loaderContainer = document.querySelector('.loader-container');
+        setTimeout(() => {
+            loaderContainer.style.display = 'none';
+        }, 1000);
+    </script>
+    
+
+
     <nav class="navbar" id="top">
       <div class="navbar-logo">
-          <img src="./img/logo.jpg" alt="techfort logo">
+          <img src="./img/logo.jpg" alt=" logo">
       </div>
       <ul class="navbar-links">
-          <li><a class="active" href="./">
-              <i class="fas fa-home"></i>
-              Home</a>
-          </li>
+        
           <li> 
               <a href="./admin-profile.html"> 
                   <i class="fas fa-user"></i>
@@ -72,6 +84,7 @@
                     <th>Document for translation</th>
                     <th>Action</th>
                 </tr>
+      
                 <tr> 
                     <td>#12345</td>
                     <td>
@@ -80,7 +93,26 @@
                             View document
                         </a>
                      </td>
-                    <td><button>Upload Translation</button></td>
+                    <td>
+                        <a href="./upload_translation.html">
+
+                            <button>Upload Translation</button>
+                        </a>
+                    </td>
+                                    </tr>
+                <tr> 
+                    <td>#12345</td>
+                    <td>
+                        <a href="">
+
+                            View document
+                        </a>
+                     </td>
+                    <td>
+                       <a href="./upload_translation.html">
+
+                           <button>Upload Translation</button></td>
+                       </a>
                 </tr>
                 <tr> 
                     <td>#12345</td>
@@ -91,7 +123,24 @@
                         </a>
                      </td>
                     <td>
-                        <button>Upload Translation</button></td>
+                       <a href="./upload_translation.html">
+
+                           <button>Upload Translation</button></td>
+                       </a>
+                </tr>
+                <tr> 
+                    <td>#12345</td>
+                    <td>
+                        <a href="">
+
+                            View document
+                        </a>
+                     </td>
+                    <td>
+                       <a href="./upload_translation.html">
+
+                           <button>Upload Translation</button></td>
+                       </a>
                 </tr>
                 <tr> 
                     <td>#12345</td>
