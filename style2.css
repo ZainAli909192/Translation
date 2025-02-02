@@ -180,7 +180,7 @@ body {
     height:60vh;  
     border-radius: 4px;
     margin-top: 2rem; 
-    filter: drop-shadow(12px 12px 10px gray);
+    filter: drop-shadow(7px 7px 5px var(--primary-color));
     animation: slideInFromLeft 2s;
     animation-timeline: view();
     animation-range: entry 0% cover 50% ;    
@@ -220,8 +220,8 @@ body {
         text-align: center;
     }
 
-    .about img {
-        width: 60vw; 
+    .about img, .about video {
+        width: 70vw; 
         height: auto;
         z-index: 1;
         margin-bottom: 20px;
@@ -238,8 +238,8 @@ body {
     }
 }
 @media (max-width: 480px) {
-    .about img {
-        width: 60vw;
+    .about img, .about video {
+        width: 70vw;
         height: auto;
         z-index: 1;
         margin-bottom: 20px;    
@@ -1205,3 +1205,5 @@ z-index: 9999;
         transform: scale(1);
     }
 }
+
+
