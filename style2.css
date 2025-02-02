@@ -1112,7 +1112,7 @@ z-index: 9999;
     transition: animation 2s; 
    }
 .services-listed:nth-child(1) {
-    animation: slideFromLeft 1s ease-in-out forwards;
+    animation: oneafterother 1s ease-in-out forwards;
     animation-timeline: view();
     animation-range: entry 0% cover 30% ;
     transition: animation 2s;
@@ -1175,6 +1175,16 @@ z-index: 9999;
     }
 }
 
+@keyframes oneafterother {
+    from {
+      opacity: 0;
+      transform: translateX(-20%);
+    }
+    to{
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 .translation-item:nth-child(3){
     animation: scalling 1s ;
     animation-timeline: view();
