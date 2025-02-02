@@ -1254,6 +1254,7 @@ z-index: 9999;
 .section-title {
     font-size: 1.8rem;
     margin-bottom: 20px;
+    text-align: center;
     animation: fadeInDown 1s ease-in-out;
 }
 
