@@ -278,7 +278,7 @@ body {
 }
 
 .document-translation h2 {
-    font-size: 32px;
+    font-size: 29px;
     margin-bottom: 40px;
     color: #000;
 }
@@ -305,7 +305,7 @@ body {
 }
 
 .translation-item h3 {
-    font-size: 22px;
+    font-size: 20px;
     color: #000;
     margin-bottom: 10px;
 }
@@ -328,6 +328,10 @@ body {
     .translation-item {
         max-width: 100%;
         margin-bottom: 30px;
+    }
+    
+    .document-translation h2{
+        font-size: 1.8rem !important;
     }
 }
 
@@ -1105,16 +1109,10 @@ z-index: 9999;
 .faq-container i{
     color: white;
 }
-   .faq-container{
-    /* animation: slideFromLeft 1s ;
-    animation-timeline: view();
-    animation-range: entry 0% cover 30% ;
-    transition: animation 2s;  */
-   }
-   .faq-item{
+.faq-item{
     animation: oneafterother 1s ease-in-out forwards !important;
-    animation-timeline: view();
-    animation-range: entry 0% cover 30% ;
+    animation-timeline:  view() ; 
+    animation-range: entry 0% cover 30% !important  ;
     transition: all 2s !important; 
 }
 .faq-answer{
