@@ -18,67 +18,79 @@
     <title>Inquiry form</title>
   </head>
   <body>
+    <!-- loader code  -->
+    <div class="loader-container">
+      <img class="loader-svg" src="./img/loader.svg" alt="loader">
+  </div>
+
+  <!-- loader script  -->
+  <script>
+      const loaderContainer = document.querySelector('.loader-container');
+      setTimeout(() => {
+          loaderContainer.style.display = 'none';
+      }, 1000);
+  </script>
+  
 
      
-    <nav class="navbar" id="top">
-      <div class="navbar-logo">
-          <img src="./img/logo.jpg" alt="techfort logo">
-      </div>
-      <ul class="navbar-links">
-         
-          <li> 
+ 
+  <nav class="navbar" id="top">
+    <div class="navbar-logo">
+        <img src="./img/logo.jpg" alt="techfort logo">
+    </div>
+    <ul class="navbar-links">
+       
+        <li> 
+            <a href="./"> 
+                <i class="fas fa-home"></i>
+                Home</a>
+            </li>
+        <li> 
+            <a href="./about.html"> 
+                <i class="fas fa-info-circle"></i>
+                About</a>
+            </li>
+        <li>                
+            <a href="./.#services"> 
+                <i class="fas fa-clipboard-list"></i>
+                Services 
+            </a></li>                
+            <li><a href="./inquiry-form.html" >
+                <i class="fas fa-search"></i>	                Track inquiry</a>
+            </li> 
+            <li><a href="./.#faq" > 
+                <i class="fas fa-question-circle"></i>
+                FAQ</a>
+            </li> 
+            <li><a href="./admin.html" > 
+                <i class="fas fa-user"></i>
+                Admin?     	                
+                <li><a href="./.#contact" >
+                    <i class="fas fa-paper-plane"></i> 
+                    Contact Us</a>
+                </li> 
+            </a>
+        </li> 
 
-              <a href="./"> 
-                  <i class="fas fa-home"></i>
-
-                  Home</a>
-              </li>
-          <li> 
-
-              <a href="./.#about"> 
-                  <i class="fas fa-info-circle"></i>
-
-                  About us</a>
-              </li>
-              <li>                
-              <a href="./.#services"> 
-                  <i class="fas fa-clipboard-list"></i>
-
-                  Services 
-              </a></li>                
-               
-          <li><a href="./get-quote.html" >
-              <i class="fas fa-comment-dollar"></i> 
-              Get quote</a>
-          </li> 
-          <li><a href="./inquiry-form.html" >
-              <i class="fas fa-search"></i>	                Track inquiry</a>
-          </li> 
-          <li><a href="./admin.html" > 
-              <i class="fas fa-user"></i>
-          Admin?     	                
-          </a>
-          </li> 
-
-          <!-- <li><a href="#track" >
-              <i class="fas fa-info-circle"></i>
-              Track inquiry</a>
-          </li>  -->
-      </ul>
-
-     <a href="./.#contact">
-            <button class="navbar-button btt success">
-                <!-- <i class="fas fa-comment-dollar"></i>  -->
-                <i class="fas fa-paper-plane"></i> 
-                Contact Us</button>
-           
-        </a>
-              <div class="navbar-toggle">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-      </div>
-  </nav>
+        <!-- <li><a href="#track" >
+            <i class="fas fa-info-circle"></i>
+            Track inquiry</a>
+        </li>  -->
+    </ul>
+    <a href="./get-quote.html">
+        <button class="navbar-button btt success">
+            <!-- <i class="fas fa-comment-dollar"></i>  -->
+            <i class="fas fa-comment-dollar"></i> 
+            Get quote
+        </button>
+       
+    </a>
+    <div class="navbar-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+</nav> 
 
     <form action="" class="form">
       <h1 class="text-center">Provide your details & document</h1>
@@ -160,6 +172,7 @@ navbarLinksAnchors.forEach(anchor => {
 });
 
   </script>
+
 
 
   </body>
