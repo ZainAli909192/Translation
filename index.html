@@ -155,36 +155,44 @@ body{
 </main>
 
 <!-- Services sections -->
-<div class="translation-services" id="services">
-    <h2>We offer following documents translation services</h2>
-    <div class="services-list">
-        <ul class="services-listed">
-            <li>Financial Statements</li>
-            <li>Legal Documents</li>
-            <li>Medical Documents</li>
-            <li>Business Documents</li>
-            <li>Annual Reports</li>
-            <li>ID Cards</li>
-        </ul>
-        <ul class="services-listed">
-            <li>Academic Documents</li>
-            <li>Academic Transcripts</li>
-            <li>Drivers License</li>
-            <li>Tax Records</li>
-            <li>Passports</li>
-            <li>Bank statements</li>
-        </ul>
-        <ul class="services-listed">
-            <li>Birth Certificates</li>
-            <li>Certifications</li>
-            <li>Apostille</li>
-            <li>College Applications</li>
-            <li>Depositions</li>
-            <li>Mortgage Applications</li>
-        </ul>
+<section class="experts-section">
+    <h2 class="section-title">Meet Our Experts 👩‍💻👨‍💻</h2>
+    <div class="experts-slider">
+        <div class="experts-container">
+            <div class="expert-card">
+                <img src="./img/expert1.png" alt="Omar">
+                <h3>Omar Al-Farsi</h3>
+                <p>Legal Translation Specialist</p>
+            </div>
+            <div class="expert-card">
+                <img src="./img/expert3.png" alt="Amina">
+                <h3>Amina El-Mansouri</h3>
+                <p>Expert in Medical Documents</p>
+            </div>
+            <div class="expert-card">
+                <img src="./img/expert2.png" alt="Yousef">
+                <h3>Yousef Al-Hadi</h3>
+                <p>Professional Business Translator</p>
+            </div>
+            <div class="expert-card">
+                <img src="./img/expert4.png" alt="Layla">
+                <h3>Layla Kareem</h3>
+                <p>Academic & Research Translator</p>
+            </div>
+        </div>
     </div>
-</div>
+</section>
 
+<script>const slider = document.querySelector('.experts-container');
+
+    slider.addEventListener('mouseover', () => {
+        slider.style.animationPlayState = 'paused';
+    });
+    
+    slider.addEventListener('mouseleave', () => {
+        slider.style.animationPlayState = 'running';
+    });
+    </script>
 <!-- FAQ section  -->
 <div id="faq"></div> 
 <div class="faq-container">

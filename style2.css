@@ -1244,4 +1244,75 @@ z-index: 9999;
     }
 }
 
+.experts-section {
+    padding: 50px 20px;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+}
 
+.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+/* Slider Wrapper */
+.experts-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Slider Container */
+.experts-container {
+    display: flex;
+    gap: 20px;
+    width: 200%;
+    animation: slideLeft 10s linear infinite;
+}
+
+/* Individual Cards */
+.expert-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;
+}
+.expert-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 4px;
+}
+
+.expert-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Slider Animation */
+@keyframes slideLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .experts-container {
+        width: 300%;
+    }
+
+    @keyframes slideLeft {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-100%); }
+    }
+    
+.section-title{
+    font-size: 1.4rem;
+    text-align: center;
+}
+}
