@@ -167,7 +167,7 @@ body {
     /* background: linear-gradient(220deg, white 60%, var(--primary-color)); */
     background: whitesmoke; 
     display: flex;
-    width: 84.9vw;
+    width: 88vw;
     padding: 4.7%;
   }
   
@@ -1106,10 +1106,28 @@ z-index: 9999;
     color: white;
 }
    .faq-container{
-    animation: slideFromLeft 1s ;
+    /* animation: slideFromLeft 1s ;
     animation-timeline: view();
     animation-range: entry 0% cover 30% ;
-    transition: animation 2s; 
+    transition: animation 2s;  */
+   }
+   .faq-item{
+    animation: oneafterother 1s ease-in-out forwards !important;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30% ;
+    transition: all 2s !important; 
+}
+.faq-answer{
+    transition: all 2s !important; 
+}
+   .faq-item:nth-child(1){
+    animation-delay: 0.3s !important;
+   }
+   .faq-item:nth-child(2){
+    animation-delay: 0.4s !important;
+   }
+   .faq-item:nth-child(3){
+    animation-delay: 0.5s !important;
    }
 .services-listed:nth-child(1) {
     animation: oneafterother 1s ease-in-out forwards;
@@ -1206,7 +1224,19 @@ z-index: 9999;
     /* animation-timeline: view();
   animation-range: entry 0% cover 0% ;  */
 }
-
+#about img:hover{
+    transition: transform 1s;
+    transform: scale(1.07);
+}
+#about .content button:hover{
+    transition: transform 1s;
+    transform: scale(1.07);
+}
+.translation-item img{
+    animation: slideFromLeft 2s;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35% ;
+}
 @keyframes scalling {
     from {
         transform: scale(0);
