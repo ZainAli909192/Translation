@@ -175,7 +175,7 @@ body {
     font-size: 1.8rem;  
     color: var(--primary-color);
   }
-  .about img {
+  .about img, .about video {
     width: 45vw;  
     height:60vh;  
     border-radius: 4px;
