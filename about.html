@@ -15,10 +15,10 @@
     body{
         overflow-x: hidden;
     }
-        #about .content{ 
-            /* animation: scalling 2s !important; */
+        #about .content, .translators{ 
+            animation: scalling 2s !important;
             animation-timeline: view();
-          animation-range: entry 0% cover 30% !important; 
+            animation-range: entry 0% cover 30% !important; 
         }
         @keyframes scalling {
             from {
@@ -104,6 +104,7 @@
         <div class="bar"></div>
     </div>
 </nav> 
+
     <main>
         <!-- About section  -->
         <section class="about about2" id="about">
@@ -131,31 +132,43 @@
         </section>
 
         <!-- document translation services  -->
-        <section class="document-translation">
-            <h2>Why use our document translation services?</h2>
-            <div class="translation-wrapper">
-                <div class="translation-item">
-                    <img src="./img/diploma.png" alt="Professional Expertise">
-                    <h3>Professional Expertise</h3>
+        <section class="translaters">
+    
+            <div class="text-content">
+                <h1>Professional online translation services.</h1>
+                <br><br>
+                <h3>Quick, simple and affordable.</h3>
+                <br><br>
+                <p>
+                    Experience seamless and cost-effective translation solutions with our user-friendly online platform and global network of expert translators. 
+                    We deliver high-quality translations quickly and efficiently, saving your time and resources.
+                </p>
+            </div>
+        
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <h3>Expert Translators with industry knowledge</h3>
+                        <div class="feature-icon">
+                            <img src="./img/expert1.png" alt="Native Translators">
+                        </div>
+                    </div>
                     <p>
-                        Trust our expert document translators to handle all your translation needs, from sensitive legal documents and confidential medical records to every other type of document, ensuring accuracy and precision.
-                         </div>
-                <div class="translation-item">
-                    <img src="./img/easyway.png" alt="Easy Process">
-                    <h3>Easy Process</h3>
-                    <p>
-                        Get started in minutes! Simply upload your documents to our intuitive self-service Wizard, provide a brief for our translators, receive an instant quote, and let us take care of the rest
-                    </p>
+                        Our network of industry-specialized translators ensures your project is handled by an expert with in-depth knowledge of your domain            </p>
                 </div>
-                <div class="translation-item">
-                    <img src="./img/simple.png" alt="Simple Communication">
-                    <h3>Simple Communication</h3>
-                    <p>
-                        Collaborate seamlessly with your dedicated document translator through our online platform. Share feedback, provide additional instructions, and track progress in real-time to ensure your final translation is error-free and meets your expectations
-                    </p>
+        
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <h3>Hassle-free</h3>
+                        <div class="feature-icon">
+                            <img src="./img/expert3.png" alt="Hassle Free">
+                        </div>
+                    </div>
+                    <p>We manage every step of your multilingual translation projects, from finding the best translators to quality assurance and delivery – we do it all for you.</p>
                 </div>
             </div>
-        </section>  
+        </section>
+        
 </main>
 
 

@@ -92,8 +92,8 @@ body {
     font-size: 18px;
 }
 .navbar-links li:hover i {
-color: var(--primary-color);
-transform: scale(1.1);
+    color: var(--primary-color);
+    transform: scale(1.1);
 }
  
 .navbar-button {
@@ -1438,3 +1438,95 @@ width: 60% !important;
     }
   }
   
+  /* General Section Styling */
+.translaters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 10%;
+    animation: slideFromLeft 2s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+
+/* Main Heading */
+.text-content {
+    text-align: left;
+    max-width: 700px;
+}
+
+.text-content h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.text-content h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Features Container */
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+/* Individual Feature Card */
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    background: #1D1427;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Feature Title + Icon */
+.feature-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+}
+
+.feature-header h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.text-content p{
+    font-size: 1.2rem;
+    text-wrap: wrap;
+}
+.feature-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Feature Hover Effect */
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 4px 4px var(--primary-color);
+    cursor: pointer;
+    scale: 1.1;
+    transition: scale 0.5s ease-in-out;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .translaters {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .features {
+        max-width: 500px;
+    }
+}
