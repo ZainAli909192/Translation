@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    
+    <!-- <link rel="stylesheet" href="dashboard.css" /> -->
+
+    <!-- <link rel="stylesheet" href="admin.css" /> -->
+    <link rel="stylesheet" href="inquiry-form.css" />
+    <!-- Linking Google Fonts for Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <script src="inquiry-form.js" defer></script>
+    <title>Inquiry form</title>
+    <script src="./script.js" defer></script>
+
+  </head>
+  <body>
+    <!-- loader code  -->
+    <div class="loader-container">
+      <img class="loader-svg" src="./img/loader.svg" alt="loader">
+  </div>
+
+  <!-- loader script  -->
+  <script>
+      const loaderContainer = document.querySelector('.loader-container');
+      setTimeout(() => {
+          loaderContainer.style.display = 'none';
+      }, 1000);
+  </script>
+  
+
+     
+ 
+  <nav class="navbar" id="top">
+    <div class="navbar-logo">
+        <img src="./img/logo.jpg" alt="techfort logo">
+    </div>
+    <ul class="navbar-links">
+       
+        <li> 
+            <a href="./"> 
+                <i class="fas fa-home"></i>
+                Home</a>
+            </li>
+        <li> 
+            <a href="./about.html"> 
+                <i class="fas fa-info-circle"></i>
+                About</a>
+            </li>
+        <li>                
+            <a href="./.#services"> 
+                <i class="fas fa-clipboard-list"></i>
+                Services 
+            </a></li>                
+            <li><a href="./inquiry-form.html" >
+                <i class="fas fa-search"></i>	                Track inquiry</a>
+            </li> 
+            <li><a href="./.#faq" > 
+                <i class="fas fa-question-circle"></i>
+                FAQ</a>
+            </li> 
+            <li><a href="./admin.html" > 
+                <i class="fas fa-user"></i>
+                Admin?     	                
+                <li><a href="./.#contact" >
+                    <i class="fas fa-paper-plane"></i> 
+                    Contact Us</a>
+                </li> 
+            </a>
+        </li> 
+
+        <!-- <li><a href="#track" >
+            <i class="fas fa-info-circle"></i>
+            Track inquiry</a>
+        </li>  -->
+    </ul>
+    <a href="./get-quote.html">
+        <button class="navbar-button btt success">
+            <!-- <i class="fas fa-comment-dollar"></i>  -->
+            <i class="fas fa-comment-dollar"></i> 
+            Get quote
+        </button>
+       
+    </a>
+    <div class="navbar-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+</nav> 
+
+    <form action="" class="form">
+      <h1 class="text-center">Provide your details & document</h1>
+      <!-- Progress bar -->
+      <!-- <div class="progressbar">
+        <div class="progress" id="progress"></div>
+        
+        <div class="progress-step" data-title="Track Inquiry"></div>
+        <div class="progress-step" data-title="Quotation "> </div>
+        <div class="progress-step" data-title="Payment"></div> 
+        <div class="progress-step" data-title="Download translation"></div>
+      </div>  -->
+
+      <!-- Steps -->
+      <div class="form-step form-step-active">
+          <div class="input-group">
+            <label for="email">Name</label>
+            <input type="email" name="email" id="email" />
+          </div>
+          <div class="input-group"> 
+            <label for="Inquiry Number">Email</label>
+            <input type="number" name="Inquiry Number" id="Inquiry Number" />
+          </div>
+          <div class="input-group"> 
+            <label for="document">Document for translation</label>
+            <input type="file" name="document" id="document" />
+          </div>
+          <div class=""> 
+            <button onclick="showPopup()" class="btn btn-next width-50  ">
+              Submit now 
+            </button>
+          </div>
+        </div>
+    </form>
+    <div id="popup" class="popup-container" style="display: none;">
+        <div class="popup-content">
+            <h3>We will provide you quotation within 24 hours</h1>
+            <!-- <img src="./img/easyway.png" alt=""> -->
+            <button onclick="closePopup()" style="margin-top: 2rem; padding: 3% 10%;">Okay </button>
+        </div>
+    </div>
+
+    <script>
+
+function showPopup() {
+        document.getElementById('popup').style.display = 'block';
+    }
+    const ul =document.querySelectorAll(".navbar-links ");
+    const navlinks =document.querySelectorAll(".navbar-links a");
+    navlinks.forEach(item,()=>{
+        item.addEventListener("click",()=>{
+            ul.classList.remove("active");
+        alert(item);
+        })
+    })
+
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+        window.location.href = "./";
+    }
+
+
+
+      // Toggle mobile menu visibility
+      const toggleButton = document.querySelector('.navbar-toggle');
+const navbarLinks = document.querySelector('.navbar-links');
+const navbarLinksAnchors = document.querySelectorAll('.navbar-links li a');
+
+// Toggle navbar when clicking the button
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active');
+});
+
+// Hide navbar when any anchor link is clicked
+navbarLinksAnchors.forEach(anchor => {
+  anchor.addEventListener('click', () => {
+      navbarLinks.classList.remove('active');
+  });
+});
+
+  </script>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <!-- header  -->
+  <meta charset="utf-8">
+  <title>Index</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style2.css">
+  <!-- Font Awesome Link for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <script src="./script.js" defer></script>
+
+</head>  
+<body>
+  
+    <!-- loader code  -->
+    <div class="loader-container">
+        <img class="loader-svg" src="./img/Loader.svg" alt="loader">
+    </div>
+
+    <!-- loader script  -->
+    <script>
+        const loaderContainer = document.querySelector('.loader-container');
+        setTimeout(() => {
+            loaderContainer.style.display = 'none';
+        }, 1000);
+    </script>
+    
+<style> 
+body{
+    overflow-x: hidden;
+}
+    .about .content{ 
+        animation: scalling 2s ;
+        /* animation-timeline: view();
+      animation-range: entry 0% cover 30% ;  */
+    }
+    @keyframes scalling {
+        from {
+            transform: scale(0);
+        }
+        to {
+            transform: scale(1);
+        }
+    }
+</style>
+
+   
+<nav class="navbar" id="top">
+    <div class="navbar-logo">
+        <img src="./img/logo.jpg" alt="techfort logo">
+    </div>
+    <ul class="navbar-links">
+       
+        <li> 
+            <a href="./"> 
+                <i class="fas fa-home"></i>
+                Home</a>
+            </li>
+        <li> 
+            <a href="./about.html"> 
+                <i class="fas fa-info-circle"></i>
+                About</a>
+            </li>
+        <li>                
+            <a href="#services"> 
+                <i class="fas fa-clipboard-list"></i>
+                Services 
+            </a></li>                
+            <li><a href="./inquiry-form.html" > 
+                <i class="fas fa-search"></i>	                Track inquiry</a>
+            </li> 
+            <li><a href="#faq" > 
+                <i class="fas fa-question-circle"></i>
+                FAQ</a>
+            </li> 
+            <li><a href="./admin.html" > 
+                <i class="fas fa-user"></i>
+                Admin?     	                
+                <li><a href="./get-quote.html" >
+                    <i class="fas fa-paper-plane"></i> 
+                    Contact Us</a>
+                </li> 
+            </a>
+        </li> 
+
+        <!-- <li><a href="#track" >
+            <i class="fas fa-info-circle"></i>
+            Track inquiry</a>
+        </li>  -->
+    </ul>
+    <a href="./get-quote.html">
+        <button class="navbar-button btt success">
+            <!-- <i class="fas fa-comment-dollar"></i>  -->
+            <i class="fas fa-comment-dollar"></i> 
+            Get quote
+        </button>
+       
+    </a>
+    <div class="navbar-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+</nav> 
+    <main>
+        <!-- About section  -->
+        <section class="about about2" id="about">
+              <video src="./img/video2.mp4" autoplay muted loop></video>
+              
+            <!-- <img src="./img/about1.png" class=" from-left" alt=" about"> -->
+            <div class="content ">
+                <h1>Professional documents translation services 
+                </h1>
+                <div class="sub-content">
+                    <div class="about1">
+                        <p>
+                            Documents are an essential part of our daily lives, regardless of our location or profession. From rental agreements and job applications to medical records and business contracts, it's vital to ensure that your documents are understood by their intended recipients. Our expert document translation services provide fast and accurate translations of any document in any language, giving you peace of mind and guaranteeing that your message is conveyed clearly
+                        </p>
+                    </div>
+                 
+                </div>
+                <a href="#contact">
+
+                    <button class="navbar-button success">
+                        <i class="fas fa-comment-dollar"></i> 
+                        Get Quote</button> 
+                </a>
+            </div>
+        </section>
+
+        <!-- document translation services  -->
+        <section class="document-translation">
+            <h2>Why use our document translation services?</h2>
+            <div class="translation-wrapper">
+                <div class="translation-item">
+                    <img src="./img/diploma.png" alt="Professional Expertise">
+                    <h3>Professional Expertise</h3>
+                    <p>
+                        Trust our expert document translators to handle all your translation needs, from sensitive legal documents and confidential medical records to every other type of document, ensuring accuracy and precision.
+                         </div>
+                <div class="translation-item">
+                    <img src="./img/easyway.png" alt="Easy Process">
+                    <h3>Easy Process</h3>
+                    <p>
+                        Get started in minutes! Simply upload your documents to our intuitive self-service Wizard, provide a brief for our translators, receive an instant quote, and let us take care of the rest
+                    </p>
+                </div>
+                <div class="translation-item">
+                    <img src="./img/simple.png" alt="Simple Communication">
+                    <h3>Simple Communication</h3>
+                    <p>
+                        Collaborate seamlessly with your dedicated document translator through our online platform. Share feedback, provide additional instructions, and track progress in real-time to ensure your final translation is error-free and meets your expectations
+                    </p>
+                </div>
+            </div>
+        </section>  
+</main>
+
+
+<!-- footer section -->
+  <footer>All &copy; rights reserved</footer>
+
+  <!-- navbar toggle  -->
+    <script>
+        // Toggle mobile menu visibility
+        const toggleButton = document.querySelector('.navbar-toggle');
+const navbarLinks = document.querySelector('.navbar-links');
+const navbarLinksAnchors = document.querySelectorAll('.navbar-links li a');
+
+// Toggle navbar when clicking the button
+toggleButton.addEventListener('click', () => {
+    navbarLinks.classList.toggle('active');
+});
+
+// Hide navbar when any anchor link is clicked
+navbarLinksAnchors.forEach(anchor => {
+    anchor.addEventListener('click', () => {
+        navbarLinks.classList.remove('active');
+    });
+});
+
+    </script>
+  
+</body>
+</html>

@@ -1,0 +1,112 @@
+<section id="track">
+    <div class="tracking-content">
+       <p>
+
+           Looking to track your inquiry? 
+        </p>
+    <img src="./img/tracking.jpeg" alt="">
+    </div> 
+  <div class=" description-form  success" style="    background: #a777e3;
+">
+    <p class="mesg ">Track your inquiry</p>
+    
+    <form action="" name="contact-form" id="contact-form" method="post" autocomplete="off">
+  
+        <div class="row">
+        <div class="form-group">
+            <label for="name">Email</label>
+            <input type="text" id="name" placeholder="" name="name"  required >
+        </div>
+        <div class="form-group">
+            <label for="number">Inquiry Number</label>
+            <input type="number" id="inq_number" placeholder=""   name="email" required>
+          </div>
+    </div>
+    
+    <div class="row">
+      
+      <button type="submit"  class="navbar-button" onclick="showPopup()">   
+        <i class="fas fa-search"></i>        
+        Track now</button>
+    </form>
+    </div> 
+    <div class="dangerr">  
+        Your translated document will be available to download with in 2 days
+        <button class="navbar-button download-btn">
+            <i class="fas fa-arrow-down "> </i>
+            Download now
+        </button>
+    </div>
+    <br>    
+    
+ <!-- popup of payment -->
+<div id="popup" class="popup-container" style="display: none;">
+    <div class="popup-content">
+        <h2>Quotation from admin</h2>
+        <br>
+        <p>Price: $100</p>
+        <p>Number of Days: 2</p>
+        <button onclick="showPaymentForm()">Accept</button>
+        <button class="danger" onclick="closePopup()">Reject</button>
+    </div>
+</div>
+
+<!-- payment form (initially hidden) -->
+<div id="popup2" class="popup-container" style="display: none;">
+    <div class="popup-content">
+        <div id="payment-form" style="display: none;">
+            <h3>Payment Details</h3>
+            <label for="card-number">Card Number</label>
+            <input type="text" id="card-number" placeholder="Enter card number">
+            <label for="expiry">Expiry Date</label>
+            <input type="text" id="expiry" placeholder="MM/YY">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" placeholder="CVV">
+            <button onclick="submitPayment()">Submit Payment</button>
+        </div>
+        <img src="./img/payment2.jpg" alt="">
+
+    </div>
+</div>
+ 
+<!-- script for popup show hide -->
+<script>
+    function showPopup() {
+        document.getElementById('popup').style.display = 'block';
+    }
+    const ul =document.querySelectorAll(".navbar-links ");
+    const navlinks =document.querySelectorAll(".navbar-links a");
+    navlinks.forEach(item,()=>{
+        item.addEventListener("click",()=>{
+            ul.classList.remove("active");
+        alert(item);
+        })
+    })
+
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+        document.getElementById('popup2').style.display = 'none'; // Close the payment form if popup is closed
+    }
+
+    function showPaymentForm() {
+        document.getElementById('popup').style.display = 'none'; // Hide the first popup
+        document.getElementById('popup2').style.display = 'block'; // Show the payment form
+        document.getElementById('payment-form').style.display = 'block'; // Ensure the payment form is shown
+    }
+
+    function submitPayment() {
+        alert('Payment submitted successfully!');
+        closePopup(); // Close both popups after successful payment
+        document.querySelector('.dangerr').style.display = 'block'; // Ensure the payment form is shown
+        setTimeout(()=>{
+    document.querySelector('.dangerr').style.display = 'none';  
+    
+}, 8000)
+}
+</script>
+
+    
+    </div>
+    </div>
+  
+  </section>

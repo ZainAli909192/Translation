@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/@codingnepal -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar with Dropdown Menu | CodingNepal</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="admin.css" />
+    <!-- Linking Google Fonts for Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+  </head>
+  <body>
+
+    <!-- loader code  -->
+    <div class="loader-container">
+        <img class="loader-svg" src="./img/loader.svg" alt="loader">
+    </div>
+
+    <!-- loader script  -->
+    <script>
+        const loaderContainer = document.querySelector('.loader-container');
+        setTimeout(() => {
+            loaderContainer.style.display = 'none';
+        }, 1000);
+    </script>
+    
+
+
+    <nav class="navbar" id="top">
+      <div class="navbar-logo">
+          <img src="./img/logo.jpg" alt=" logo">
+      </div>
+      <ul class="navbar-links">
+        
+          <li> 
+              <a href="./admin-profile.html"> 
+                  <i class="fas fa-user"></i>
+
+                  Profile</a>
+              </li>
+          <li> 
+              <a href="./need_quotation.html"> 
+                  <i class="fas fa-comment"></i>
+
+                  Provide quotation</a>
+              </li>
+              <li>                
+                <a href="./provide_translation.html"> 
+                  <i class="fas fa-file-invoice-dollar"></i>
+                  Provide Translation  
+              </a></li>                
+              
+              <li><a href="./" >
+                  <i class="fas fa-sign-out-alt"></i> 
+                  Logout</a>
+              </li>
+              
+         
+
+          <!-- <li><a href="#track" >
+              <i class="fas fa-info-circle"></i>
+              Track inquiry</a>
+          </li>  -->
+      </ul>
+      <div></div>
+      <div class="navbar-toggle">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+      </div>
+  </nav> 
+
+      <!-- Right-side Content Area -->
+      <div class="main-content">
+
+        <section id="accepted" class="container need ">
+            <h2>Provide translation</h2>
+            <table>
+                <tr>
+                    <th>Enquiry No</th>
+                    <th>Document for translation</th>
+                    <th>Action</th>
+                </tr>
+      
+                <tr> 
+                    <td>#12345</td>
+                    <td>
+                        <a href="">
+
+                            View document
+                        </a>
+                     </td>
+                    <td>
+                        <a href="./upload_translation.html">
+
+                            <button>Upload Translation</button>
+                        </a>
+                    </td>
+                                    </tr>
+                <tr> 
+                    <td>#12345</td>
+                    <td>
+                        <a href="">
+
+                            View document
+                        </a>
+                     </td>
+                    <td>
+                       <a href="./upload_translation.html">
+
+                           <button>Upload Translation</button></td>
+                       </a>
+                </tr>
+                <tr> 
+                    <td>#12345</td>
+                    <td>
+                        <a href="">
+
+                            View document
+                        </a>
+                     </td>
+                    <td>
+                       <a href="./upload_translation.html">
+
+                           <button>Upload Translation</button></td>
+                       </a>
+                </tr>
+                <tr> 
+                    <td>#12345</td>
+                    <td>
+                        <a href="">
+
+                            View document
+                        </a>
+                     </td>
+                    <td>
+                       <a href="./upload_translation.html">
+
+                           <button>Upload Translation</button></td>
+                       </a>
+                </tr>
+                <tr> 
+                    <td>#12345</td>
+                    <td>
+                        <a href="">
+
+                            View document
+                        </a>
+                     </td>
+                    <td>
+                       <a href="./upload_translation.html">
+
+                           <button>Upload Translation</button></td>
+                       </a>
+                </tr>
+            </table>
+        </section>
+    </div>
+
+  <script>
+    // Toggle mobile menu visibility
+    const toggleButton = document.querySelector('.navbar-toggle');
+const navbarLinks = document.querySelector('.navbar-links');
+const navbarLinksAnchors = document.querySelectorAll('.navbar-links li a');
+
+// Toggle navbar when clicking the button
+toggleButton.addEventListener('click', () => {
+navbarLinks.classList.toggle('active');
+});
+
+// Hide navbar when any anchor link is clicked
+navbarLinksAnchors.forEach(anchor => {
+anchor.addEventListener('click', () => {
+    navbarLinks.classList.remove('active');
+});
+});
+
+</script>
+
+    <!-- Script -->
+    <!-- <script src="script.js"></script> -->
+  </body>
+</html>

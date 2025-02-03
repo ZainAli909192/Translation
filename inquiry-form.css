@@ -1,0 +1,429 @@
+:root {
+  --primary-color: #a777e3;
+}
+
+
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  
+font-family: calibri; 
+}
+html{
+  scroll-behavior: smooth;
+}
+/* Width and height of the scrollbar */
+::-webkit-scrollbar {
+  width: 12px; /* Width for vertical scrollbar */
+  height: 12px; /* Height for horizontal scrollbar */
+}
+
+/* Track (background of the scrollbar) */
+::-webkit-scrollbar-track {
+  background: #f4f4f4;  /* Light gray track */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Handle (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+  background: #a777e3;  /* Main scrollbar color */
+  border-radius: 10px; /* Rounded corners */
+  border: 2px solid #f4f4f4; /* Adds padding effect */
+}
+
+/* Handle hover effect */
+::-webkit-scrollbar-thumb:hover {
+  background: #8757c8;  /* Darker shade on hover */
+}
+
+/* Buttons (up and down arrows) */
+::-webkit-scrollbar-button {
+  background-color: #dcdade; /* Button background color */
+  border-radius: 4px; 
+  height: 20px;
+}
+
+/* Corner where vertical and horizontal scrollbars meet */
+::-webkit-scrollbar-corner {
+  background: #f4f4f4;
+}
+
+/* Customizing horizontal scrollbar specifically */
+body {
+  scrollbar-width: thin;  /* For Firefox */
+  scrollbar-color: #a777e3 #f4f4f4;  /* Thumb and track color */
+}
+
+/* Basic navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+}
+
+.navbar-logo img {
+  width: 60px;
+  border-radius: 50%;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  margin: 0 15px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.navbar-toggle .bar {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+}
+
+/* Submenu styles */
+.submenu {
+  display: none;
+  list-style: none;
+  position: absolute;
+  background-color: #444;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.submenu-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.services-menu:hover .submenu {
+  display: block;
+}
+
+
+/* Media query for mobile */
+@media (max-width: 768px) {
+  .navbar-links {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      text-align: left;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      background-color: #333;
+      padding: 20px 0;
+
+  }
+
+  .navbar-links li {
+      margin: 15px 0;
+      padding-left: 3%;
+  }
+
+  .navbar-toggle {
+      display: flex;
+      cursor: pointer;
+  }
+
+  .navbar-links.active {
+      display: flex;
+      z-index: 10;
+  }
+
+}
+.navbar-button {
+  padding: 10px 20px;
+  background-color: #FF6347;
+  background: #a777e3;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 4px;  
+}
+
+/* Global Stylings */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  display: block;
+  width: 70%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Progressbar */
+.progressbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  counter-reset: step;
+  margin: 2rem 0 4rem;
+}
+
+.progressbar::before,
+.progress {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  background-color: #dcdcdc;
+  z-index: -1;
+}
+
+.progress {
+  background-color: var(--primary-color);
+  width: 0%;
+  transition: 0.3s;
+}
+
+.progress-step {
+  width: 2.1875rem;
+  height: 2.1875rem;
+  background-color: #dcdcdc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-step::before {
+  counter-increment: step;
+  content: counter(step);
+}
+
+.progress-step::after {
+  content: attr(data-title);
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.progress-step-active {
+  background-color: var(--primary-color);
+  color: #f3f3f3;
+}
+
+/* Form */
+.form {
+  width: clamp(320px, 40%, 630px);
+  margin: 0 auto;
+  margin-top: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.35rem;
+  padding: 1.5rem;
+  box-shadow: 0 0 8px 6px rgb(209, 199, 199);
+  /* box-shadow: 0 0 30px 5px var(--primary-color); */
+}
+
+.form-step {
+  display: none;
+  transform-origin: top;
+  animation: animate 0.5s;
+}
+
+.form-step-active {
+  display: block;
+}
+
+.input-group {
+  margin: 2rem 0;
+}
+
+@keyframes animate {
+  from {
+    transform: scale(1, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+/* Button */
+.btns-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  /* width: 50%; */
+}
+
+.btn {
+  padding: 0.75rem;
+  display: block;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: #f3f3f3;
+  text-align: center;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: 0.9s;
+animation: glowing 1s infinite ease-in-out;
+}
+@keyframes glowing {
+  50%{
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+  }
+} 
+.btn:hover {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+}
+
+@media (max-width:480px){
+  .form{
+    width: 75%;
+    margin-top: 29%;
+  }
+}
+.form button{
+  border: none;
+  outline: none;
+}
+
+.popup-container {
+  position: fixed;
+  top:0%;
+  left: 0;
+  padding-top: 7%;  
+  padding-left: 30%; 
+  width: 300%;  
+  height: 100%;  
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+}
+.popup-content {
+  background: #fff;
+  padding: 15px;  
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  margin-top: 5%;  
+  
+}
+.popup-content button {
+  padding: 12px 12px;
+  margin-left: 0;  
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  background-color: #a777e3;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .popup-container { 
+      padding-left: 2%; /* Adjust the left padding on smaller screens */
+      z-index: 100; 
+      margin-right: 1rem; 
+      padding-top: 40%; 
+  }
+  #popup2  {
+      z-index: 10000; 
+  }
+  #popup2 .popup-content {
+      flex-direction: column; /* Stack the image and form vertically */
+      align-items: center; /* Center the content */
+  padding-left: 1%;  
+  }
+
+  #popup2 .popup-image {
+      margin-right: 0; /* Remove margin */
+      margin-bottom: 20px; /* Add space below the image */
+      flex: 0 0 80%; /* Allow the image to take up 80% of the width */
+  }
+
+  #popup2 .popup-form {
+      flex: 1;
+      width: 80%; /* Make the form take up 80% of the width on small screens */
+  }
+
+  #popup2 .popup-form button {
+      font-size: 14px; /* Adjust button font size for mobile */
+      padding: 10px 20px; /* Adjust padding for better fit */
+  }
+
+  #popup2 .popup-form input {
+      padding: 8px; /* Adjust padding for smaller screens */
+  }
+}
+
+/* Further adjustments for very small screens (e.g., mobile phones) */
+@media (max-width: 480px) {
+  #popup2 img {
+      max-height: 200px; /* Reduce image size on very small screens */
+  }
+
+  #popup2 .popup-form input {
+      padding: 6px; /* Smaller input padding for very small screens */
+  }
+
+  #popup2 .popup-form button {
+      font-size: 12px; /* Further reduce button font size */
+      padding: 8px 15px; /* Adjust padding for smaller devices */
+  }
+}
+
+
+/* Loader Styles */
+.loader-container{
+  position: fixed;
+height: 100vh;
+width: 100vw;
+background-color: rgba(23, 22, 22, 0.2);
+  /* display: none; */
+  backdrop-filter: blur(1px);
+z-index: 9999;     
+}
+.loader-container img{
+  position: relative;
+  top: 40%;
+  left: 40%;
+  height: 100px;
+  width: 100px;
+}

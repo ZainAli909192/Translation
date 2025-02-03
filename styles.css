@@ -1,0 +1,168 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
+    text-align: center;
+    padding: 100px 20px;
+    color: rgb(16, 16, 16);
+}
+ 
+.hero h2 {
+    font-size: 2.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+.hero .btn {
+    padding: 15px 30px;
+    background: #ff5733;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background 0.3s;
+    margin-top: 10rem;  
+}
+
+.hero .btn:hover {
+    background: #c13b1d;
+}
+
+/* Forms and Containers */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgb(237, 235, 235);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    box-shadow: -4px -4px 9px rgb(196, 208, 196), 4px 4px 9px rgb(196, 208, 196);
+    /* box-shadow: -4px -4px 9px rgb(196, 208, 196); */
+}
+.fadein{
+    animation: fadein 2s 1;
+
+}
+@keyframes fadein {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.container h2 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, button {
+    padding: 15px;
+    font-size: 1.1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+/* Quotation Section */
+.btn.accept {
+    background: #28a745;
+    border: none;
+    padding: 15px 30px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.btn.reject {
+    background: #dc3545;
+    border: none;
+    padding: 15px 30px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Status Tracking */
+.status {
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff3cd;
+    border: 1px solid #ffeeba;
+    border-radius: 5px;
+}
+
+.status h3 {
+    color: #856404;
+}
+
+/* Hidden Elements */
+.hidden {
+    display: none;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}

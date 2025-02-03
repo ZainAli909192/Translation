@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Index</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style2.css">
+  <!-- Font Awesome Link for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  
+  <style> 
+    body{
+        overflow-x: hidden;
+    }
+        .about .content{ 
+            animation: scalling 2s ;
+        }
+        @keyframes scalling {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+    </style>
+    
+</head>
+<body>
+  
+    <!-- loader code  -->
+    <div class="loader-container">
+        <img class="loader-svg" src="./img/Loader.svg" alt="loader">
+    </div>
+
+    <!-- loader script  -->
+    <script>
+        const loaderContainer = document.querySelector('.loader-container');
+        setTimeout(() => {
+            loaderContainer.style.display = 'none';
+        }, 1000);
+    </script>
+  
+    <nav class="navbar" id="top">
+        <div class="navbar-logo">
+            <img src="./img/logo.jpg" alt="techfort logo">
+        </div>
+        <ul class="navbar-links">
+           
+            <li> 
+                <a href="./"> 
+                    <i class="fas fa-home"></i>
+                    Home</a>
+                </li>
+            <li> 
+                <a href="./about.html"> 
+                    <i class="fas fa-info-circle"></i>
+                    About</a>
+                </li>
+            <li>                
+                <a href="#services"> 
+                    <i class="fas fa-clipboard-list"></i>
+                    Services 
+                </a></li>                
+                <li><a href="./inquiry-form.html" >
+                    <i class="fas fa-search"></i>	                Track inquiry</a>
+                </li> 
+                <li><a href="#faq" > 
+                    <i class="fas fa-question-circle"></i>
+                    FAQ</a>
+                </li> 
+                <li><a href="./admin.html" > 
+                    <i class="fas fa-user"></i>
+                    Admin?     	                
+                    <li><a href="./get-quote.html" >
+                        <i class="fas fa-paper-plane"></i> 
+                        Contact Us</a>
+                    </li> 
+                </a>
+            </li> 
+
+            <!-- <li><a href="#track" >
+                <i class="fas fa-info-circle"></i>
+                Track inquiry</a>
+            </li>  -->
+        </ul>
+        <a href="./get-quote.html">
+            <button class="navbar-button btt success">
+                <!-- <i class="fas fa-comment-dollar"></i>  -->
+                <i class="fas fa-comment-dollar"></i> 
+                Get quote
+            </button>
+           
+        </a>
+        <div class="navbar-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav> 
+  
+
+    <main>
+          <!-- About section  -->
+          <section class="about about2" id="about">
+            <img src="./img/about-pic.jpg" class=" from-left" alt=" about">
+        
+            <div class="content ">
+                <h1>Professional documents translation services 
+                </h1>
+                <div class="sub-content">
+                    <div class="about1">
+                        <p>
+                            Documents - they're a part of all of our lives, no matter where we live or what we do. Whether it's a lease for your home, applications for a job or school, doctor's files, or business contracts, ensuring your documents are understood by the person you need to submit them to is crucial. <br> <br> Our expert document translators can be trusted to take any document in any language and translate it quickly and accurately.
+
+                        </p>
+                    </div>
+                 
+                </div>
+                <a href="./get-quote.html">
+
+                    <button class="navbar-button success">
+                        <i class="fas fa-comment-dollar"></i> 
+                        Get Quote</button> 
+                </a>
+            </div>
+        </section>
+
+        <!-- document translation services  -->
+        <section class="document-translation">
+            <h2>Why use our document translation services?</h2>
+            <div class="translation-wrapper">
+                <div class="translation-item">
+                    <img src="./img/diploma.png" alt="Professional Expertise">
+                    <h3>Professional Expertise</h3>
+                    <p>Our translators have years of experience translating 
+                        <strong>all types of official documents</strong>. 
+                        From legal documents to medical documents and more, 
+                        let our expert document translators take care of your document translation needs.</p>
+                </div>
+                <div class="translation-item">
+                    <img src="./img/easyway.png" alt="Easy Process">
+                    <h3>Easy Process</h3>
+                    <p>Upload your documents to our self-service Wizard in just a few clicks. 
+                        Provide a brief for your document translator, get a quote, and leave the rest to us.</p>
+                </div>
+                <div class="translation-item">
+                    <img src="./img/simple.png" alt="Simple Communication">
+                    <h3>Simple Communication</h3>
+                    <p>Whether you have feedback on a finished project or want to give further instructions, 
+                        our online platform makes it easy to communicate directly with your document translator 
+                        to make sure the final product comes out flawless.</p>
+                </div>
+            </div>
+        </section>  
+</main>
+<div class="translation-services" id="services">
+    <h2>We offer following documents translation services</h2>
+    <div class="services-list">
+        <ul class="services-listed">
+            <li>Financial Statements</li>
+            <li>Legal Documents</li>
+            <li>Medical Documents</li>
+            <li>Business Documents</li>
+            <li>Annual Reports</li>
+            <li>ID Cards</li>
+        </ul>
+        <ul class="services-listed">
+            <li>Academic Documents</li>
+            <li>Academic Transcripts</li>
+            <li>Drivers License</li>
+            <li>Tax Records</li>
+            <li>Passports</li>
+            <li>Bank statements</li>
+        </ul>
+        <ul class="services-listed">
+            <li>Birth Certificates</li>
+            <li>Certifications</li>
+            <li>Apostille</li>
+            <li>College Applications</li>
+            <li>Depositions</li>
+            <li>Mortgage Applications</li>
+        </ul>
+    </div>
+</div>
+<!-- Services sections -->
+<section class="experts-section">
+    <h2 class="section-title">Meet Our Experts 👩‍💻👨‍💻</h2>
+    <div class="experts-slider">
+        <div class="experts-container">
+            <div class="expert-card">
+                <img src="./img/expert1.png" alt="Omar">
+                <h3>Omar Al-Farsi</h3>
+                <p>Legal Translation Specialist</p>
+            </div>
+            <div class="expert-card">
+                <img src="./img/expert3.png" alt="Amina">
+                <h3>Amina El-Mansouri</h3>
+                <p>Expert in Medical Documents</p>
+            </div>
+            <div class="expert-card">
+                <img src="./img/expert2.png" alt="Yousef">
+                <h3>Yousef Al-Hadi</h3>
+                <p>Professional Business Translator</p>
+            </div>
+            <div class="expert-card">
+                <img src="./img/expert4.png" alt="Layla">
+                <h3>Layla Kareem</h3>
+                <p>Academic & Research Translator</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>const slider = document.querySelector('.experts-container');
+
+    slider.addEventListener('mouseover', () => {
+        slider.style.animationPlayState = 'paused';
+    });
+    
+    slider.addEventListener('mouseleave', () => {
+        slider.style.animationPlayState = 'running';
+    });
+    </script>
+<!-- FAQ section  -->
+<div id="faq"></div> 
+<div class="faq-container">
+    <div class="faq-left">
+        <h2>Frequently Asked Questions</h2>
+        <p>Questions? You’re not alone!</p>
+        <img class="faq-image" src="./img/faq-image.png" alt="FAQ Illustration"> 
+    </div>
+    <div class="faq-right">
+        <div class="faq-item" onclick="toggleFAQ(this)">
+            <span>What type of file i can upload for translation?</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            We accept a wide range of file formats, <span style="color: var(--primary-color);">
+
+                including DOCX, PDF, TXT, PPTX, XLSX, JPG, PNG </span>, and more. If you have a specific file format that is not listed, feel free to contact us, and we will do our best to accommodate your needs.
+   
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+            <span>How much time does it take for the document to be translated?</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            The turnaround time depends on the length and complexity of the document, as well as the language pair. Smaller projects <span style="color:var(--primary-color)"> (under 1,000 words) </span> can often be completed within <span style="color:var(--primary-color)">24 hours</span>, while larger projects may take a few days. If you need an urgent translation, we also offer expedited services for faster delivery.
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+            <span>Do you have different pricing levels?</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            <p>
+                We offer different pricing levels depending on the <span style="color:var(--primary-color)">length of document </span>, . Our pricing is structured to be flexible and meet your specific needs.
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function toggleFAQ(element) {
+        const answer = element.nextElementSibling;
+        element.classList.toggle("active");
+        if (answer.style.display === "block") {
+            answer.style.display = "none";
+        } else {
+            answer.style.display = "block";
+        }
+    }
+</script>
+
+<!-- Contact section  -->
+<section id="contact" > 
+  <div class="description-form">
+    <p class="mesg">Get in touch</p>
+    
+    <form action="" name="contact-form" id="contact-form" method="post" autocomplete="off">
+  
+        <div class="row">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="" name="name"  required >
+        </div>
+        <div class="form-group">
+            <label for="number">Number</label>
+            <input type="number" id="number" placeholder=""   name="email" required>
+          </div>
+    </div>
+    
+    <div class="row">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder=""   name="email" required>
+          </div>
+      <div class="form-group">
+        <label for="mesg">Message</label> 
+    <textarea name="mesg" id="mesg" cols="10" rows="5"></textarea>  
+</div>  
+</div>
+<div class="row">
+      <div></div>  
+      <button type="submit"  class=" send" style="width: 40%;">       <i class="fas fa-paper-plane"></i>
+         Send Message</button>
+    </form> 
+      
+    </div>
+    </div>
+  
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('.icon');
+
+                if (answer.style.display === "block") {
+                    answer.style.display = "none";
+                    icon.textContent = "+";
+                } else {
+                    answer.style.display = "block";
+                    icon.textContent = "-";
+                }
+            });
+        });
+    </script>
+  </section>
+
+<!-- footer section -->
+  <footer>All &copy; rights reserved</footer>
+
+  <!-- navbar toggle  -->
+    <script>
+        // Toggle mobile menu visibility
+        const toggleButton = document.querySelector('.navbar-toggle');
+const navbarLinks = document.querySelector('.navbar-links');
+const navbarLinksAnchors = document.querySelectorAll('.navbar-links li a');
+
+// Toggle navbar when clicking the button
+toggleButton.addEventListener('click', () => {
+    navbarLinks.classList.toggle('active');
+});
+
+// Hide navbar when any anchor link is clicked
+navbarLinksAnchors.forEach(anchor => {
+    anchor.addEventListener('click', () => {
+        navbarLinks.classList.remove('active');
+    });
+});
+
+    </script>
+  <script src="./script.js"></script>
+</body>
+</html>

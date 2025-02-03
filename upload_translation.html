@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/@codingnepal -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar with Dropdown Menu | CodingNepal</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="admin.css" />
+    <!-- Linking Google Fonts for Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+  </head>
+  <body>
+
+    <nav class="navbar" id="top">
+      <div class="navbar-logo">
+          <img src="./img/logo.jpg" alt=" logo">
+      </div>
+      <ul class="navbar-links">
+          <li><a class="active" href="./">
+              <i class="fas fa-home"></i>
+              Home</a>
+          </li>
+          <li> 
+              <a href="./about.html"> 
+                  <i class="fas fa-user"></i>
+
+                  Profile</a>
+              </li>
+          <li> 
+              <a href="./need_quotation.html"> 
+                  <i class="fas fa-comment"></i>
+
+                  Provide quotations</a>
+              </li>
+              <li>                
+                <a href="./provide_translation.html"> 
+                  <i class="fas fa-file-invoice-dollar"></i>
+                  Provide Translation  
+              </a></li>                
+              
+              <li><a href="./" >
+                  <i class="fas fa-sign-out-alt"></i> 
+                  Logout</a>
+              </li>
+              
+         
+
+          <!-- <li><a href="#track" >
+              <i class="fas fa-info-circle"></i>
+              Track inquiry</a>
+          </li>  -->
+      </ul>
+      <div></div>
+      <div class="navbar-toggle">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+      </div>
+  </nav> 
+ 
+        <section id="pending"  class="container container2     need2">
+           
+    
+            <div id=" uploadform" class="upload-form">
+                <h3>Upload Translation</h3> 
+                <form>
+                    <label for="price">Inquiry number:</label>
+                    <input type="number" id="price" placeholder="Inquiry number"  >
+ 
+                    <label for="days">Translated document:</label>
+                    <input type="file" id="days" placeholder="Your profile  "  >
+                   
+                    <button type="submit" id="update-btn">Upload translation</button>
+                </form>
+                
+            </div>
+            <img src="./img/upload.png" id="login-pic" alt="">
+
+  <script>
+    // Toggle mobile menu visibility
+    const toggleButton = document.querySelector('.navbar-toggle');
+const navbarLinks = document.querySelector('.navbar-links');
+const navbarLinksAnchors = document.querySelectorAll('.navbar-links li a');
+
+// Toggle navbar when clicking the button
+toggleButton.addEventListener('click', () => {
+navbarLinks.classList.toggle('active');
+});
+
+// Hide navbar when any anchor link is clicked
+navbarLinksAnchors.forEach(anchor => {
+anchor.addEventListener('click', () => {
+    navbarLinks.classList.remove('active');
+});
+});
+
+</script>
+
+    <!-- Script -->
+    <!-- <script src="script.js"></script> -->
+  </body>
+</html>
