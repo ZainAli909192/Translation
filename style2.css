@@ -1379,3 +1379,8 @@ z-index: 9999;
         margin-top: -5% !important; 
     } 
 }
+@media (max-width:480px){
+    .description-form button {
+width: 60% !important;
+    }
+}
