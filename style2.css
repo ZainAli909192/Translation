@@ -1232,7 +1232,7 @@ z-index: 9999;
     overflow: hidden;
     padding: 12px 24px;
     border: none;
-    background-color: #a777e3; 
+    background-color: var(--primary-color); 
     color: white;
     font-size: 16px;
     border-radius: 5px;
@@ -1240,13 +1240,8 @@ z-index: 9999;
     transition: background-color 0.3s ease;
 }
 
-#about .content button:hover {
-    background-color: #8b5fd3;
-}
-
 /* Ripple Effect */
-/* #about .content button::before { */
-#about .content::before,#about .content button::before {
+#about .content button::before {
     content: "";
     position: absolute;
     top: 0;
@@ -1258,7 +1253,6 @@ z-index: 9999;
     transform: scale(0);
     transition: transform 0.3s ease;
 }
-/* #about .content button:hover::before { */
 #about .content button:hover::before {
     transform: scale(1);
 }
