@@ -10,6 +10,25 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <script src="./script.js" defer></script>
 
+
+  <style> 
+    body{
+        overflow-x: hidden;
+    }
+        #about .content{ 
+            /* animation: scalling 2s !important; */
+            animation-timeline: view();
+          animation-range: entry 0% cover 30% !important; 
+        }
+        @keyframes scalling {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+    </style>
 </head>  
 <body>
   
@@ -26,24 +45,6 @@
         }, 1000);
     </script>
     
-<style> 
-body{
-    overflow-x: hidden;
-}
-    .about .content{ 
-        animation: scalling 2s ;
-        /* animation-timeline: view();
-      animation-range: entry 0% cover 30% ;  */
-    }
-    @keyframes scalling {
-        from {
-            transform: scale(0);
-        }
-        to {
-            transform: scale(1);
-        }
-    }
-</style>
 
    
 <nav class="navbar" id="top">
