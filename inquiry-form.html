@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
-    <script src="step-js.js" defer></script>
-    <script src="./script.js" defer></script>
+    <script src="inquiry-form.js" defer></script>
+    <!-- <script src="./script.js" defer></script> -->
 
     <title>Inquiry form</title>
   </head>
@@ -63,7 +63,7 @@
             <li><a href="./admin.html" > 
                 <i class="fas fa-user"></i>
                 Admin?     	                
-                <li><a href="./get-quote.html" >
+                <li><a href="./.#contact" >
                     <i class="fas fa-paper-plane"></i> 
                     Contact Us</a>
                 </li> 
@@ -75,7 +75,7 @@
             Track inquiry</a>
         </li>  -->
     </ul>
-    <a href="#contact">
+    <a href="./get-quote.html">
         <button class="navbar-button btt success">
             <!-- <i class="fas fa-comment-dollar"></i>  -->
             <i class="fas fa-comment-dollar"></i> 
@@ -96,17 +96,14 @@
       <div class="progressbar">
         <div class="progress" id="progress"></div>
         
-        <!-- <div
-          class="progress-step progress-step-active"
-          data-title="Send Inquiry"
-        ></div>   -->
-        <div class="progress-step" data-title="Track Inquiry"></div>
+        <div class="progress-step active" data-title="Track Inquiry"></div>
         <div class="progress-step" data-title="Quotation "> </div>
         <div class="progress-step" data-title="Payment"></div> 
         <div class="progress-step" data-title="Download translation"></div>
       </div> 
 
       <!-- Steps -->
+       
       <div class="form-step form-step-active">
           <div class="input-group">
             <label for="email">Email</label>
@@ -116,7 +113,7 @@
             <label for="Inquiry Number">Inquiry Number</label>
             <input type="number" name="Inquiry Number" id="Inquiry Number" />
           </div>
-          <div class="">
+          <div class=" btns-group">
             <a href="#" class="btn btn-next width-50  ">
               Next 
               <i class="fas fa-arrow-right"></i>
@@ -183,6 +180,7 @@
         </div>
       </div>
     </form>
+
 
     <script>
       // Toggle mobile menu visibility

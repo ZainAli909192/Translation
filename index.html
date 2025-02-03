@@ -267,12 +267,14 @@
     function toggleFAQ(element) {
         const answer = element.nextElementSibling;
         element.classList.toggle("active");
+        answer.style.transition = "max-height 1s ease-in-out";
         if (answer.style.display === "block") {
             answer.style.display = "none";
         } else {
             answer.style.display = "block";
         }
     }
+    // Add smoothness to the toggle animation
 </script>
 
 <!-- Contact section  -->

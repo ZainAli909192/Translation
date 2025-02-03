@@ -147,6 +147,7 @@ body {
   .navbar-links.active {
       display: flex;
       z-index: 10;
+
   }
 
 }
@@ -237,7 +238,7 @@ input {
   color: #666;
 }
 
-.progress-step-active {
+.progress-step.active {
   background-color: var(--primary-color);
   color: #f3f3f3;
 }
