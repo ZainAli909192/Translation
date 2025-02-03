@@ -93,7 +93,9 @@ body {
 }
 .navbar-links li:hover i {
 color: var(--primary-color);
-transform: scale(1.1);}
+transform: scale(1.1);
+}
+
 .navbar-button {
     padding: 10px 20px;
     background: var(--primary-color);
@@ -522,16 +524,12 @@ textarea{
     /* background-color: red; */
 }
 
-
+ 
 #contact{
     border-top: 1px solid rgb(193, 204, 204);
     display: flex;
     padding: 10px;
 }
-
-
-
-
 
 
 
@@ -1419,11 +1417,11 @@ width: 60% !important;
 }
 
 .button:hover svg {
-    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+    transform: translateX(1em) rotate(45deg) scale(1.1);
 }
   
   .button:hover span {
-      transform: translateX(5em);
+      transform: translateX(2em);
     }
     
     .button:active {
