@@ -95,7 +95,7 @@ body {
 color: var(--primary-color);
 transform: scale(1.1);
 }
-
+ 
 .navbar-button {
     padding: 10px 20px;
     background: var(--primary-color);
