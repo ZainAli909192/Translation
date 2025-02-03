@@ -8,6 +8,7 @@ font-family: calibri;
 }
 :root{
     --primary-color:#a777e3;
+    --secondary-color:#333;
 }
 html{
     scroll-behavior: smooth;
@@ -859,8 +860,8 @@ footer{
     text-align: center;
     font-size: 1.2rem; 
     padding: 10px;
-    background-color: #a777e3;
-    background-color: #080808;
+    /* background-color: #a777e3; */
+    background-color: var(--secondary-color);
     color: white;
 }
 
