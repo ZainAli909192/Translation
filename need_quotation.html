@@ -14,6 +14,21 @@
   </head>
   <body>
 
+        <!-- loader code  -->
+        <div class="loader-container">
+            <img class="loader-svg" src="./img/loader.svg" alt="loader">
+        </div>
+    
+        <!-- loader script  -->
+        <script>
+            const loaderContainer = document.querySelector('.loader-container');
+            setTimeout(() => {
+                loaderContainer.style.display = 'none';
+            }, 1000);
+        </script>
+        
+    
+
     <nav class="navbar" id="top">
       <div class="navbar-logo">
           <img src="./img/logo.jpg" alt="techfort logo">
@@ -70,19 +85,45 @@
                     <td>#12345</td>
                     <!-- <td>user@example.com</td> -->
                     <td><a href="#">View Document</a></td>
-                    <td><button onclick="showQuotationForm()">Provide Quotation</button></td>
+                    <td><button onclick="showQuotationForm(event)">Provide Quotation</button></td>
                 </tr>
                 <tr>
                     <td>#12345</td>
                     <!-- <td>user@example.com</td> -->
                     <td><a href="#">View Document</a></td>
-                    <td><button onclick="showQuotationForm()">Provide Quotation</button></td>
+                    <td><button onclick="showQuotationForm(event)">Provide Quotation</button></td>
+                </tr>
+                <tr>
+                    <td>#12345</td>
+                    <!-- <td>user@example.com</td> -->
+                    <td><a href="#">View Document</a></td>
+                    <td><button onclick="showQuotationForm(event)">Provide Quotation</button></td>
+
+                
+                </tr>
+                <tr>
+                    <td>#12345</td>
+                    <!-- <td>user@example.com</td> -->
+                    <td><a href="#">View Document</a></td>
+                    <td><button onclick="showQuotationForm(event)">Provide Quotation </button></td>
+
+                <script>
+                    function showQuotationForm(event) {
+                        event.preventDefault();                    
+                    let form=document.getElementById('quotation-form');
+                        if(form.style.display=="block"){
+                            form.style.display="none";
+                        }else{
+                            form.style.display="block";
+                        }
+                    }
+                </script>
                 </tr>
             </table>
             
           
     
-            <div id="quotation-form" class="">
+            <div id="quotation-form" class="hide " style="display: none;">
                 <h3>Provide Quotation</h3>
                 <form>
                     <label for="price">Price ($):</label>
