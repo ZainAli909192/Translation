@@ -337,11 +337,10 @@ body {
 
 #contact{
     
-    background: 
-    linear-gradient(rgba(150, 60, 60, 0.2), rgba(51, 47, 47, 0.2)),
-    url("https://img.freepik.com/free-photo/young-man-glassess-is-working-his-workplace-office-he-wears-blue-shirt-he-is-writing-notebook-view-from_197531-537.jpg?ga=GA1.1.572590152.1728395548&semt=ais_incoming_vrsd");
+    background: linear-gradient(rgba(150, 60, 60, 0.2), rgba(51, 47, 47, 0.2)),url("https://img.freepik.com/free-photo/young-man-glassess-is-working-his-workplace-office-he-wears-blue-shirt-he-is-writing-notebook-view-from_197531-537.jpg?ga=GA1.1.572590152.1728395548&semt=ais_incoming_vrsd");
     background-size: cover;
-    background-position: center;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
 } 
 
 .description-form{
@@ -1316,4 +1315,23 @@ z-index: 9999;
     font-size: 1.4rem;
     text-align: center;
 }
+}
+
+
+
+.sticky {
+    position: sticky;
+    top: 0;
+    width: 96vw;
+    z-index: 999;
+    transition: all 1s ;
+}
+@media (max-width: 768px) {
+    .sticky {
+        width: 90vw;
+        margin-bottom: 2rem;  
+    }
+    #about {   
+        margin-top: 20% !important; 
+    } 
 }

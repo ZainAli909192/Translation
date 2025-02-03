@@ -7,6 +7,24 @@
   <link rel="stylesheet" href="style2.css">
   <!-- Font Awesome Link for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  
+  <style> 
+    body{
+        overflow-x: hidden;
+    }
+        .about .content{ 
+            animation: scalling 2s ;
+        }
+        @keyframes scalling {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+    </style>
+    
 </head>
 <body>
   
@@ -22,26 +40,7 @@
             loaderContainer.style.display = 'none';
         }, 1000);
     </script>
-    
-<style> 
-body{
-    overflow-x: hidden;
-}
-    .about .content{ 
-        animation: scalling 2s ;
-        /* animation-timeline: view();
-      animation-range: entry 0% cover 30% ;  */
-    }
-    @keyframes scalling {
-        from {
-            transform: scale(0);
-        }
-        to {
-            transform: scale(1);
-        }
-    }
-</style>
-
+  
     <nav class="navbar" id="top">
         <div class="navbar-logo">
             <img src="./img/logo.jpg" alt="techfort logo">
@@ -99,6 +98,8 @@ body{
             <div class="bar"></div>
         </div>
     </nav> 
+  
+
     <main>
           <!-- About section  -->
           <section class="about about2" id="about">
@@ -352,6 +353,6 @@ navbarLinksAnchors.forEach(anchor => {
 });
 
     </script>
-  
+  <script src="./script.js"></script>
 </body>
 </html>
