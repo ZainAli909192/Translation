@@ -6,6 +6,23 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+:root {
+  --primary-color:#7342C2;
+  --secondary-color:#333;
+  --btn-bg:#ffcc00;
+  --primary-color: #7342C2; /* Main purple */
+  --secondary-color: #ffd633; /* Dark background */
+  --hover-color: #8E6AC6; /* Original hover color */
+  --btn-bg:#ffcc00;
+  --hover-bg-color: #ffcc00; /* Lighter purple for hover background */
+  --hover-text-color: rgb(39, 38, 38); /* Lighter purple for hover background */
+  --gradient-start: #7342C2; /* Gradient start color */
+  --gradient-end: #4A2A7A; /* Gradient end color */
+  --text-color: white; /* White text for readability */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
 body {
   min-height: 100vh;
   background: linear-gradient(#F1F3FF, #CBD4FF);
@@ -220,7 +237,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: var(--primary-color );
     height: 100vh; /* Full height for sidebar */
     width: 250px;  /* Sidebar width */
     flex-direction: column; /* Stack items vertically */
@@ -290,12 +307,14 @@ body {
 
 .navbar-links a:hover {
     background-color: #555;
+    background-color: var(--secondary-color);
+    color: var(--hover-text-color);
     /* background-color: transparent; */
 }
 
 .navbar-button {
     padding: 10px 20px;
-    background-color: #a777e3;
+    background-color: var(--primary-color);
     border: none;
     color: white;
     font-size: 18px;
