@@ -401,7 +401,7 @@ body {
     font-weight: bold;
     opacity: 0.9;
 }
-.about img {
+.about img, .about video {
     margin-left: 2rem; 
     width: 45vw;
     height: 60vh;
@@ -409,18 +409,22 @@ body {
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
 }
 
-
+.about video{
+    margin-right: 2rem; 
+    width: 45vw;
+    height: 60vh;
+}
 /* Responsive Design */
 @media (max-width: 992px) {
     .about {
-        flex-direction: column;
+        flex-direction: column-reverse;
         text-align: center;
     }
     .about .content {
         max-width: 90%;
     }
 
-    .about img {
+    .about img, .about video {
         width: 80vw;
         height: auto;
 animation: none;

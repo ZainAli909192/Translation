@@ -27,6 +27,13 @@
 
   <!-- loader script  -->
   <script>
+    
+function showPopup() {
+        document.getElementById('popup').style.display = 'block';
+        // setTimeout(() => {
+        //     document.getElementById('popup').style.display = 'none';
+        // }, 1000);
+    }
       const loaderContainer = document.querySelector('.loader-container');
       setTimeout(() => {
           loaderContainer.style.display = 'none';
@@ -94,7 +101,7 @@
     </div>
 </nav> 
 
-    <form action="" class="form">
+    <form action="" class="form" onsubmit="event.preventDefault()">
       <h1 class="text-center">Provide your details & document</h1>
       <!-- Progress bar -->
       <!-- <div class="progressbar">
@@ -109,12 +116,12 @@
       <!-- Steps -->
       <div class="form-step form-step-active">
           <div class="input-group">
-            <label for="email">Name</label>
-            <input type="email" name="email" id="email" />
+            <label for="text">Name</label>
+            <input type="text" name="email" id="email" />
           </div>
           <div class="input-group"> 
             <label for="Inquiry Number">Email</label>
-            <input type="number" name="Inquiry Number" id="Inquiry Number" />
+            <input type="email" name="Email" id="Inquiry Number" />
           </div>
           <div class="input-group"> 
             <label for="document">Document for translation</label>
@@ -137,9 +144,6 @@
 
     <script>
 
-function showPopup() {
-        document.getElementById('popup').style.display = 'block';
-    }
     const ul =document.querySelectorAll(".navbar-links ");
     const navlinks =document.querySelectorAll(".navbar-links a");
     navlinks.forEach(item,()=>{
