@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Our Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* User-provided CSS variables and styles */
+    :root {
+      --primary-color: #7342C2;
+      --secondary-color: #333;
+      --btn-bg: #ffcc00;
+      --hover-color: #8E6AC6;
+      --text-color: white;
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      font-family: calibri;
+      overflow-x: hidden;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .about .content {
+      animation: scalling 2s;
+    }
+
+    @keyframes scalling {
+      from {
+        transform: scale(0);
+      }
+
+      to {
+        transform: scale(1);
+      }
+    }
+
+    /* Additional styles for consistency */
+    .services-listed li {
+      list-style-type: '👉';
+      padding-left: 0.5rem;
+    }
+
+    /* --- SLIDER CSS --- */
+    .slider-container {
+      position: relative;
+    }
+
+    .slider-wrapper {
+      display: flex;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      /* Smooth scrolling on iOS */
+    }
+
+    .slider-wrapper::-webkit-scrollbar {
+      display: none;
+      /* Hide scrollbar for a cleaner look */
+    }
+
+    .slider-item {
+      flex: 0 0 auto;
+      width: 100%;
+    }
+
+    .slider-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 255, 255, 0.3);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 10;
+      transition: background-color 0.3s ease;
+    }
+
+    .slider-nav-btn:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .slider-nav-btn.prev {
+      left: -20px;
+    }
+
+    .slider-nav-btn.next {
+      right: -20px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="loader-container">
+    <img class="loader-svg" src="./img/Loader.svg" alt="loader">
+  </div>
+
+  <script>
+    const loaderContainer = document.querySelector('.loader-container');
+    setTimeout(() => {
+      loaderContainer.style.display = 'none';
+    }, 1000);
+  </script>
+
+  <nav class="navbar" id="top">
+    <div class="navbar-logo">
+      <img src="./img/logo.jpg" alt=" logo">
+    </div>
+    <ul class="navbar-links">
+
+      <li>
+        <a href="./">
+          <i class="fas fa-home"></i>
+          Home</a>
+      </li>
+      <li>
+        <a href="./about.html">
+          <i class="fas fa-info-circle"></i>
+          About</a>
+      </li>
+      <li>
+        <a href="#services">
+          <i class="fas fa-clipboard-list"></i>
+          Services
+        </a>
+      </li>
+      <li><a href="./inquiry-form.html">
+          <i class="fas fa-search"></i> Track inquiry</a>
+      </li>
+      <li><a href="#faq">
+          <i class="fas fa-question-circle"></i>
+          FAQ</a>
+      </li>
+      <li><a href="./admin.html">
+          <i class="fas fa-user"></i>
+          Admin?
+        <li><a href="#contact">
+            <i class="fas fa-paper-plane"></i>
+            Contact Us</a>
+        </li>
+        </a>
+      </li>
+    </ul>
+    <a href="./get-quote.html">
+      <button class="navbar-button btt success">
+        <i class="fas fa-comment-dollar"></i>
+        Get quote
+      </button>
+    </a>
+    <div class="navbar-toggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </nav>
+
+  <main class="py-16 md:py-24" style="background: linear-gradient(to bottom, #7342C2, #4A2A7A);">
+    <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+      <div class="text-center text-white mb-16">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Our Professional Translation Services</h1>
+        <p class="text-lg md:text-xl font-medium max-w-2xl mx-auto">
+          We provide accurate and certified translation services for a wide range of documents across various industries. Your legal, academic, and business needs are in expert hands.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl shadow-xl p-8 transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+          <div class="text-center text-[#7342C2] mb-4">
+            <i class="fas fa-gavel text-4xl mb-4"></i>
+            <h3 class="text-2xl font-bold">Legal & Financial</h3>
+          </div>
+          <ul class="services-listed text-gray-700 space-y-2">
+            <li>Legal Documents</li>
+            <li>Financial Statements</li>
+            <li>Tax Records</li>
+            <li>Depositions</li>
+            <li>Mortgage Applications</li>
+            <li>Bank Statements</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl shadow-xl p-8 transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+          <div class="text-center text-[#7342C2] mb-4">
+            <i class="fas fa-graduation-cap text-4xl mb-4"></i>
+            <h3 class="text-2xl font-bold">Academic & Personal</h3>
+          </div>
+          <ul class="services-listed text-gray-700 space-y-2">
+            <li>Academic Documents</li>
+            <li>Academic Transcripts</li>
+            <li>College Applications</li>
+            <li>ID Cards</li>
+            <li>Drivers License</li>
+            <li>Passports</li>
+            <li>Birth Certificates</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl shadow-xl p-8 transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+          <div class="text-center text-[#7342C2] mb-4">
+            <i class="fas fa-briefcase text-4xl mb-4"></i>
+            <h3 class="text-2xl font-bold">Business & Other</h3>
+          </div>
+          <ul class="services-listed text-gray-700 space-y-2">
+            <li>Business Documents</li>
+            <li>Annual Reports</li>
+            <li>Medical Documents</li>
+            <li>Certifications</li>
+            <li>Apostille</li>
+          </ul>
+        </div>
+      </div>
+
+      <section class="mt-24 text-white">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold">Why Choose Us?</h2>
+          <p class="text-lg mt-4 max-w-3xl mx-auto">
+            We go beyond simple translation to deliver a service built on trust, quality, and speed.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+          <div class="p-8 rounded-lg shadow-xl" style="background-color: rgba(255, 255, 255, 0.1);">
+            <i class="fas fa-certificate text-5xl text-yellow-400 mb-4"></i>
+            <h4 class="text-xl font-semibold mb-2">Certified Translators</h4>
+            <p class="text-gray-200">Our team consists of certified professionals with expertise in legal, medical, and technical terminology.</p>
+          </div>
+          <div class="p-8 rounded-lg shadow-xl" style="background-color: rgba(255, 255, 255, 0.1);">
+            <i class="fas fa-shield-alt text-5xl text-yellow-400 mb-4"></i>
+            <h4 class="text-xl font-semibold mb-2">100% Confidential</h4>
+            <p class="text-gray-200">We prioritize your privacy and data security. All documents are handled with the highest level of confidentiality.</p>
+          </div>
+          <div class="p-8 rounded-lg shadow-xl" style="background-color: rgba(255, 255, 255, 0.1);">
+            <i class="fas fa-rocket text-5xl text-yellow-400 mb-4"></i>
+            <h4 class="text-xl font-semibold mb-2">Fast Turnaround</h4>
+            <p class="text-gray-200">We offer competitive turnaround times without compromising on the quality and accuracy of our translations.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-24 text-white">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold">Our Simple Translation Process</h2>
+          <p class="text-lg mt-4 max-w-3xl mx-auto">
+            Get your documents translated in just three easy steps.
+          </p>
+        </div>
+        <div class="relative grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+          <div class="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 w-full h-1 bg-white opacity-20 transform -translate-y-1/2"></div>
+          <div class="z-10 flex flex-col items-center">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl text-black shadow-lg mb-4" style="background-color: var(--btn-bg);">1</div>
+            <h4 class="text-xl font-semibold mb-2">Submit Your Document</h4>
+            <p class="text-gray-200 px-4">Upload your documents securely to get an instant quote and a project timeline.</p>
+          </div>
+          <div class="z-10 flex flex-col items-center">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl text-black shadow-lg mb-4" style="background-color: var(--btn-bg);">2</div>
+            <h4 class="text-xl font-semibold mb-2">Translation & Review</h4>
+            <p class="text-gray-200 px-4">Our professional translators get to work, followed by a thorough quality assurance review.</p>
+          </div>
+          <div class="z-10 flex flex-col items-center">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl text-black shadow-lg mb-4" style="background-color: var(--btn-bg);">3</div>
+            <h4 class="text-xl font-semibold mb-2">Receive Your Translation</h4>
+            <p class="text-gray-200 px-4">Your certified, high-quality translation is delivered to you securely and on time.</p>
+          </div>
+        </div>
+      </section>
+
+
+
+      <div class="mt-24 text-center">
+        <h2 class="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+        <a href="./get-quote.html" class="inline-block py-4 px-10 rounded-full font-bold text-xl transition-transform duration-300 hover:scale-105 shadow-lg" style="background-color: var(--btn-bg); color: var(--primary-color);">
+          Get a Free Quote Now <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section ">
+        <h3>About Us</h3>
+        <p>We provide professional document translation services with accuracy and efficiency.</p>
+      </div>
+
+      <div class="footer-section links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section contact">
+        <h3>Contact Us</h3>
+        <p>Email: info@gmail.com</p>
+        <p>Phone: +9712345678</p>
+        <p>Location: Dubai, UAE</p>
+      </div>
+
+      <div class="footer-section social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <img src="./img/logo.jpg" alt="">
+      <p>All &copy; Rights Reserved 2025-2026</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggleButton = document.querySelector('.navbar-toggle');
+    const navbarLinks = document.querySelector('.navbar-links');
+    const navbarLinksAnchors = document.querySelectorAll('.navbar-links li a');
+
+    // Toggle navbar when clicking the button
+    toggleButton.addEventListener('click', () => {
+      navbarLinks.classList.toggle('active');
+    });
+
+    // Hide navbar when any anchor link is clicked
+    navbarLinksAnchors.forEach(anchor => {
+      anchor.addEventListener('click', () => {
+        navbarLinks.classList.remove('active');
+      });
+    });
+  </script>
+  <script src="./script.js"></script>
+
+  <!-- swiper  -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sliderWrapper = document.querySelector('.slider-wrapper');
+      const prevButton = document.getElementById('prevSlide');
+      const nextButton = document.getElementById('nextSlide');
+      const testimonial = document.querySelector('.slider-item');
+
+      // Adjust to scroll by the width of one testimonial
+      const scrollAmount = testimonial.offsetWidth + 32; // 32px is the gap
+
+      nextButton.addEventListener('click', () => {
+        sliderWrapper.scrollBy({
+          left: scrollAmount,
+          behavior: 'smooth'
+        });
+      });
+
+      prevButton.addEventListener('click', () => {
+        sliderWrapper.scrollBy({
+          left: -scrollAmount,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>
