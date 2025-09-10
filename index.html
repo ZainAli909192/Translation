@@ -2,12 +2,13 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title>Index</title>
+  <title>Document translation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style2.css">
   <!-- Font Awesome Link for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
   <style> 
     body{
         overflow-x: hidden;
@@ -24,6 +25,258 @@
             }
         }
     </style>
+
+<style>
+    /* General Styles */
+    :root {
+        --primary-color: #7342C2;
+        --secondary-color: #333;
+        --btn-bg: #ffcc00;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f3f4f6;
+    }
+
+    .container {
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Section Styles */
+    .section-padding {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .mb-12 {
+        margin-bottom: 3rem;
+    }
+
+    .font-extrabold {
+        font-weight: 800;
+    }
+
+    .text-4xl {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+    }
+
+    .text-5xl {
+        font-size: 3rem;
+        line-height: 1;
+    }
+
+    .text-purple-main {
+        color: #7342C2;
+    }
+
+    .text-gray-600 {
+        color: #4b5563;
+    }
+
+    .mt-4 {
+        margin-top: 1rem;
+    }
+
+    .text-lg {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+    }
+
+    .max-w-3xl {
+        max-width: 48rem;
+    }
+
+    .mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Contact Form Container */
+    .contact-container {
+        background-color: white;
+        border-radius: 1.5rem;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        overflow: hidden;
+        display: flex;
+    }
+
+    /* Left Side (Contact Info) */
+    .contact-info {
+        width: 50%;
+        padding: 2rem 3rem;
+        background: linear-gradient(to bottom, #7342C2, #4A2A7A);
+    }
+
+    .contact-info h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 1rem;
+    }
+
+    .contact-info p {
+        color: #e5e7eb;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-info .contact-details {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .contact-info .contact-details div {
+        display: flex;
+        align-items: center;
+        color: #f3f4f6;
+    }
+
+    .contact-info .contact-details i {
+        color: #fde047;
+        margin-right: 0.75rem;
+    }
+
+    .contact-info .social {
+        margin-top: 2rem;
+    }
+
+    .contact-info .social h4 {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: white;
+        margin-bottom: 0.75rem;
+    }
+
+    .contact-info .social .social-icons a {
+        color: var(--hover-color);
+        font-size: 1.25rem;
+        margin-right: 1rem;
+        transition: color 0.3s ease;
+    }
+
+    .contact-info .social .social-icons a:hover {
+        /* color: white; */
+    }
+
+    /* Right Side (Form) */
+    .contact-form-wrapper {
+        width: 50%;
+        padding: 2rem 3rem;
+    }
+
+    .contact-form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-group label {
+        display: block;
+        color: #4b5563;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+        color: #adafb1;
+        font-size: 13px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border: 1px solid #d1d5db;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+    }
+    
+    .form-group textarea {
+        height: 120px;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px #a855f7;
+        border-color: transparent;
+    }
+
+    .full-width {
+        grid-column: span 2 / span 2;
+    }
+
+    /* Button Styling */
+    .submit-button {
+        padding: 0.75rem 1rem;
+        border-radius: 9999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        width: 50%;
+        border: none;
+        margin-top: 1rem;
+        /* color: var(--primary-color); */
+        color: white;
+        background-color: var(--primary-color);
+        cursor: pointer;
+    }
+
+    .svg-wrapper-1 {
+        margin-right: 0.5rem;
+    }
+
+    .svg-wrapper svg {
+        color: white;
+    }
+
+    .submit-button:hover {
+        transform: scale(1.05);
+        background-color: var(--hover-color);
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 767px) {
+        .contact-container {
+            flex-direction: column;
+        }
+
+        .contact-info,
+        .contact-form-wrapper {
+            width: 100%;
+        }
+
+        .contact-form {
+            grid-template-columns: 1fr;
+        }
+
+        .form-group {
+            width: 100%;
+        }
+    }
+</style>
+
     
 </head>
 <body>
@@ -43,7 +296,7 @@
   
     <nav class="navbar" id="top">
         <div class="navbar-logo">
-            <img src="./img/logo.jpg" alt="techfort logo">
+            <img src="./img/logo.jpg" alt=" logo">
         </div>
         <ul class="navbar-links">
            
@@ -58,7 +311,7 @@
                     About</a>
                 </li>
             <li>                
-                <a href="#services"> 
+                <a href="./services.html"> 
                     <i class="fas fa-clipboard-list"></i>
                     Services 
                 </a></li>                
@@ -72,7 +325,7 @@
                 <li><a href="./admin.html" > 
                     <i class="fas fa-user"></i>
                     Admin?     	                
-                    <li><a href="./get-quote.html" >
+                    <li><a href="#contact" >
                         <i class="fas fa-paper-plane"></i> 
                         Contact Us</a>
                     </li> 
@@ -101,28 +354,82 @@
   
 
     <main>
-          <!-- About section  -->
-          <section class="about about2" id="about">
-            <img src="./img/about-pic.jpg" class=" from-left" alt=" about">
+        <!-- About Section (Hero) -->
+        <section class="about about2" id="about">
+            <div class="content">
+                <h1>Accurate, Fast & Certified Document Translations You Can Trust!</h1>
+                <p>
+                    Your documents tell your story—make sure the world understands them. 
+                    From legal papers to business contracts, we translate them with accuracy & care, ensuring you get the results you need.  
+                    <!-- <strong>100+ languages, fast turnaround, guaranteed precision!</strong> -->
+                </p>
         
-            <div class="content ">
-                <h1>Professional documents translation services 
-                </h1>
-                <div class="sub-content">
-                    <div class="about1">
-                        <p>
-                            Documents - they're a part of all of our lives, no matter where we live or what we do. Whether it's a lease for your home, applications for a job or school, doctor's files, or business contracts, ensuring your documents are understood by the person you need to submit them to is crucial. <br> <br> Our expert document translators can be trusted to take any document in any language and translate it quickly and accurately.
+                <!-- Key Benefits -->
+                <ul class="benefits-list">
+                    <li>🌎 <strong>Translate from 100+ Languages</strong> 
+                        <!-- <p>⚡ <strong>Fast Turnaround</strong> </l> -->
+                    </li>
+                    <li>⚡ <strong>Fast Turnaround</strong> </li>
+                    <li>🔒 <strong>Certified & Secure</strong>
+                    
+                        <!-- <p>🏆 <strong>Rated #1</strong> by Businesses & Individuals</p> -->
+                    </li>
+                    <li>🏆 <strong>Rated #1</strong> by Businesses & Individuals</li>
+                </ul>
+        
+                <!-- Call to Action -->
+                 <div class="trusted-btn">
 
-                        </p>
+                     <p class="trust-badge" style="margin-top: 1.4rem; margin-right: 1rem;">⭐ Trusted by <strong>10,000+ Clients</strong> Worldwide</p>
+                     <a href="./get-quote.html">
+                         <button class="navbar-button success">
+                             <i class="fas fa-comment-dollar"></i> Get Quote
+                            </button>
+                        </a>
                     </div>
-                 
-                </div>
-                <a href="./get-quote.html">
+        
+                <!-- Trust Badge -->
+            </div>
+        
+            <!-- Image/Video -->
+            <img src="./img/about1.png" alt="Professional Translation Services">
+        </section>
+        
 
-                    <button class="navbar-button success">
-                        <i class="fas fa-comment-dollar"></i> 
-                        Get Quote</button> 
-                </a>
+        <section class="translaters">
+    
+            <div class="text-content">
+                <h2>Professional online translation services.</h2>
+                <br><br>
+                <h3>Quick, simple and affordable.</h3>
+                <br><br>
+                <p>
+                    Experience seamless and cost-effective translation solutions with our user-friendly online platform and global network of expert translators. 
+                    We deliver high-quality translations quickly and efficiently, saving your time and resources.
+                </p>
+            </div>
+        
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <h3>Expert Translators with industry knowledge</h3>
+                        <div class="feature-icon">
+                            <img src="./img/expert1.png" alt="Native Translators">
+                        </div>
+                    </div>
+                    <p>
+                        Our network of industry-specialized translators ensures your project is handled by an expert with in-depth knowledge of your domain            </p>
+                </div>
+        
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <h3>Hassle-free</h3>
+                        <div class="feature-icon">
+                            <img src="./img/expert2.png" alt="Hassle Free">
+                        </div>
+                    </div>
+                    <p>We manage every step of your multilingual translation projects, from finding the best translators to quality assurance and delivery – we do it all for you.</p>
+                </div>
             </div>
         </section>
 
@@ -153,7 +460,9 @@
                 </div>
             </div>
         </section>  
+
 </main>
+
 <div class="translation-services" id="services">
     <h2>We offer following documents translation services</h2>
     <div class="services-list">
@@ -212,16 +521,8 @@
     </div>
 </section>
 
-<script>const slider = document.querySelector('.experts-container');
 
-    slider.addEventListener('mouseover', () => {
-        slider.style.animationPlayState = 'paused';
-    });
-    
-    slider.addEventListener('mouseleave', () => {
-        slider.style.animationPlayState = 'running';
-    });
-    </script>
+
 <!-- FAQ section  -->
 <div id="faq"></div> 
 <div class="faq-container">
@@ -263,96 +564,177 @@
     </div>
 </div>
 
-<script>
-    function toggleFAQ(element) {
-        const answer = element.nextElementSibling;
-        element.classList.toggle("active");
-        if (answer.style.display === "block") {
-            answer.style.display = "none";
-        } else {
-            answer.style.display = "block";
-        }
-    }
-</script>
 
-<!-- Contact section  -->
-<section id="contact" > 
-  <div class="description-form">
-    <p class="mesg">Get in touch</p>
-    
-    <form action="" name="contact-form" id="contact-form" method="post" autocomplete="off">
-  
-        <div class="row">
-        <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="" name="name"  required >
+
+  <section id="contact2" class="section-padding bg-gray-100">
+    <div class="container">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl text-5xl font-extrabold text-purple-main">Get in Touch</h2>
+            <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">
+                Have a question or need a custom quote? Fill out the form below, and we'll get back to you as soon as possible.
+            </p>
         </div>
-        <div class="form-group">
-            <label for="number">Number</label>
-            <input type="number" id="number" placeholder=""   name="email" required>
-          </div>
-    </div>
-    
-    <div class="row">
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder=""   name="email" required>
-          </div>
-      <div class="form-group">
-        <label for="mesg">Message</label> 
-    <textarea name="mesg" id="mesg" cols="10" rows="5"></textarea>  
-</div>  
-</div>
-<div class="row">
-      <div></div>  
-      <button type="submit"  class=" send" style="width: 40%;">       <i class="fas fa-paper-plane"></i>
-         Send Message</button>
-    </form> 
-      
-    </div>
-    </div>
-  
-    <script>
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const answer = button.nextElementSibling;
-                const icon = button.querySelector('.icon');
 
-                if (answer.style.display === "block") {
-                    answer.style.display = "none";
-                    icon.textContent = "+";
-                } else {
-                    answer.style.display = "block";
-                    icon.textContent = "-";
-                }
-            });
-        });
-    </script>
-  </section>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>
+                    We're here to help! Whether you're a new or returning client, our team is ready to answer your questions and assist with your translation needs.
+                </p>
+                <div class="contact-details">
+                    <div>
+                        <i class="fas fa-envelope"></i>
+                        <span>info@yourcompany.com</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+971 2 345 6789</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Dubai, UAE</span>
+                    </div>
+                </div>
+                <div class="social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper">
+                <form action="" name="contact-form" id="contact-form" method="post" autocomplete="off" class="contact-form">
+                    <div class="form-group full-width">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Your Name" name="name" required>
+                    </div>
+                    <div class="form-group full-width" >
+                        <label for="number">Number</label>
+                        <input type="number" id="number" placeholder="Your Phone Number" name="number" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Your Email" name="email" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="mesg">Message</label>
+                        <textarea name="mesg" id="mesg" cols="10" rows="5" placeholder="Write your message here..."></textarea>
+                    </div>
+
+                    <div class="full-width">
+                        <button class="submit-button" type="submit">
+                            <div class="svg-wrapper-1">
+                                <div class="svg-wrapper">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <span>Send message</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <!-- footer section -->
-  <footer>All &copy; rights reserved</footer>
+<footer>
+    <div class="footer-container">
+        <div class="footer-section ">
+            <h3>About Us</h3>
+            <p>We provide professional document translation services with accuracy and efficiency.</p>
+        </div>
+        
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section contact">
+            <h3>Contact Us</h3>
+            <p>Email: info@gmail.com</p>
+            <p>Phone: +9712345678</p>
+            <p>Location: Dubai, UAE</p>
+        </div>
+        
+        <div class="footer-section social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
 
-  <!-- navbar toggle  -->
-    <script>
-        // Toggle mobile menu visibility
-        const toggleButton = document.querySelector('.navbar-toggle');
+    <div class="footer-bottom">
+        <img src="./img/logo.jpg" alt="">
+        <p>All &copy; Rights Reserved 2025-2026</p>
+    </div>
+</footer>
+
+</body>
+
+<!-- navbar toggle  -->
+<script>
+    // Toggle mobile menu visibility
+    const toggleButton = document.querySelector('.navbar-toggle');
 const navbarLinks = document.querySelector('.navbar-links');
 const navbarLinksAnchors = document.querySelectorAll('.navbar-links li a');
 
 // Toggle navbar when clicking the button
 toggleButton.addEventListener('click', () => {
-    navbarLinks.classList.toggle('active');
+navbarLinks.classList.toggle('active');
 });
 
 // Hide navbar when any anchor link is clicked
 navbarLinksAnchors.forEach(anchor => {
-    anchor.addEventListener('click', () => {
-        navbarLinks.classList.remove('active');
-    });
+anchor.addEventListener('click', () => {
+    navbarLinks.classList.remove('active');
+});
 });
 
-    </script>
-  <script src="./script.js"></script>
-</body>
+</script>
+<script src="./script.js"></script>
+
+<!-- slider js  -->
+<script>const slider = document.querySelector('.experts-container');
+
+slider.addEventListener('mouseover', () => {
+    slider.style.animationPlayState = 'paused';
+});
+
+slider.addEventListener('mouseleave', () => {
+    slider.style.animationPlayState = 'running';
+});
+</script>
+
+<!-- FAQ section js  -->
+<script>
+function toggleFAQ(element) {
+    const answer = element.nextElementSibling;
+    element.classList.toggle("active");
+    answer.style.transition = "max-height 1s ease-in-out";
+    if (answer.style.display === "block") {
+        answer.style.display = "none";
+    } else {
+        answer.style.display = "block";
+    }
+}
+// Add smoothness to the toggle animation
+</script>
+
 </html>

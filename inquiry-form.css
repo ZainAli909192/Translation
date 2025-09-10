@@ -1,7 +1,18 @@
-:root {
-  --primary-color: #a777e3;
-}
 
+:root {
+  --primary-color:#7342C2;
+  --secondary-color:#333;
+  --btn-bg:#ffcc00;
+  --primary-color: #7342C2; /* Main purple */
+  --secondary-color: #ffd633; /* Dark background */
+  --hover-color: #8E6AC6; /* Original hover color */
+  --btn-bg:#ffcc00;
+  --hover-bg-color: #ffcc00; /* Lighter purple for hover background */
+  --gradient-start: #7342C2; /* Gradient start color */
+  --gradient-end: #4A2A7A; /* Gradient end color */
+  --text-color: white; /* White text for readability */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
 
 *{
   padding: 0;
@@ -62,7 +73,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #333;
+  background-color: var(--primary-color);
 }
 
 .navbar-logo img {
@@ -84,7 +95,7 @@ body {
 .navbar-links a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .navbar-toggle {
@@ -147,35 +158,45 @@ body {
   .navbar-links.active {
       display: flex;
       z-index: 10;
+
   }
 
 }
 .navbar-button {
   padding: 10px 20px;
-  background-color: #FF6347;
-  background: #a777e3;
+  background: var(--btn-bg);
   border: none;
-  color: white;
+  color: rgb(33, 32, 32);
   font-size: 18px;
   cursor: pointer;
   border-radius: 4px;  
+}
+.navbar-button:hover{
+  box-shadow: 0px 5px 5px rgb(203, 203, 190);
+  scale: 1.1;
+  transition: scale 2s;
 }
 
 /* Global Stylings */
 label {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 10px;
+  font-size: 12px;
 }
 
 input {
   display: block;
   width: 70%;
-  padding: 0.75rem;
+  padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 0.25rem;
 }
+input:focus{
 
-.width-50 {
+  border: none;
+  outline: none;
+}
+  .width-50 {
   width: 50%;
 }
 
@@ -233,13 +254,14 @@ input {
   content: attr(data-title);
   position: absolute;
   top: calc(100% + 0.5rem);
-  font-size: 0.85rem;
+  font-size: 12px;
   color: #666;
 }
 
-.progress-step-active {
+.progress-step.active {
   background-color: var(--primary-color);
   color: #f3f3f3;
+  
 }
 
 /* Form */
@@ -426,4 +448,26 @@ z-index: 9999;
   left: 40%;
   height: 100px;
   width: 100px;
+}
+
+
+
+/* new  */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at center, #7342C2, #4A2A7A); /* Creates a circular gradient centered on the page */
+  color: #333;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  max-height: 90vh;
+/* overflow-y: hidden; */
+} 
+
+.form {
+  background-color: rgba(255, 255, 255, 0.9); /* A slightly transparent white */
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
 }
