@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
 *{
     padding: 0;
     margin: 0;
 }
 body{
     
-font-family: calibri; 
+/* font-family: calibri;  */
 }
 
 :root {
@@ -111,7 +116,7 @@ body {
 .navbar-links a {
     color: var(--text-color);
     text-decoration: none;
-    font-size: 18px;
+    font-size: 13px;
     display: flex;
     align-items: center;
     gap: 8px; /* Space between icon and text */
@@ -242,7 +247,7 @@ body {
 .navbar-links a {
     color: var(--text-color);
     text-decoration: none;
-    font-size: 18px;
+    font-size: 14px;
     display: flex;
     align-items: center;
     gap: 8px; /* Space between icon and text */
@@ -256,6 +261,7 @@ body {
 
 .navbar-links li:hover i {
     color: var(--hover-color);
+    color: var(--btn-bg);
     transform: scale(1.1);
 }
 
@@ -406,6 +412,9 @@ body {
     height: 60vh;
     border-radius: 8px;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+}
+#about img:hover{
+    transform: scale(2);
 }
 .about-img{
     margin-top: 2rem; 
@@ -1115,6 +1124,7 @@ footer {
 .social-icons a {
     color: white;
     font-size: 1.5rem;
+    font-size: 13px;
     transition: transform 0.3s ease-in-out;
 }
 
